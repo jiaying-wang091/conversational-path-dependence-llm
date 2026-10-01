@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.DS_Store
+outputs/raw/
+.venv/
+config.json
+outputs/raw/
+outputs/parsed/
+outputs_smoke_C1/
+src/*.egg-info/
+src/*/*.egg-info/
+__pycache__/
+.DS_Store

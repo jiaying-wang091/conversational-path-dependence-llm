@@ -1,0 +1,4 @@
+case_id,distinct_initial_categories,initial_confidence_range,initial_d_range,pairwise_conclusion_disagreement_rate,recommendation_disagreement_rate,selective_omission_range,unique_initial_behavior_patterns_across_cells
+C1,2,8,0.32,0.4090909090909091,0.5454545454545454,0.0,12
+C2,1,10,0.17000000000000004,0.0,0.0,0.0,10
+C3,1,2,0.09000000000000002,0.0,0.0,0.0,11

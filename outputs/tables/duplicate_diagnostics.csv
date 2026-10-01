@@ -1,0 +1,16 @@
+case_id,condition,full_behavioral_duplicate_rate,full_behavioral_unique_count,full_effectively_deterministic,full_exact_duplicate_rate,full_exact_unique_count,independence_warning,initial_behavioral_duplicate_rate,initial_behavioral_unique_count,initial_effectively_deterministic,initial_exact_duplicate_rate,initial_exact_unique_count,replicate_count
+C1,commit_a,0.3,3,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.6,2,False,0.0,5,5
+C1,commit_b,0.0,5,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.4,2,False,0.1,4,5
+C1,negative_first,0.0,5,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.1,4,False,0.1,4,5
+C1,neutral,0.2,3,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.4,2,False,0.1,4,5
+C1,positive_first,0.2,3,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.6,2,False,0.0,5,5
+C2,commit_a,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,1.0,1,True,0.1,4,5
+C2,commit_b,0.0,5,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.1,4,False,0.1,4,5
+C2,negative_first,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.4,2,False,0.0,5,5
+C2,neutral,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.6,2,False,0.0,5,5
+C2,positive_first,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,1.0,1,True,0.0,5,5
+C3,commit_a,0.2,3,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.4,2,False,0.3,3,5
+C3,commit_b,0.2,3,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.6,2,False,0.1,4,5
+C3,negative_first,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.3,3,False,0.1,4,5
+C3,neutral,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.4,2,False,0.0,5,5
+C3,positive_first,0.1,4,False,0.0,5,Residual model nondeterminism observed; report the full distribution.,0.6,2,False,0.0,5,5

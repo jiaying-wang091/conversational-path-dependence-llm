@@ -1,0 +1,351 @@
+{
+  "valid": true,
+  "errors": [],
+  "case_count": 3,
+  "condition_count": 5,
+  "cell_count": 15,
+  "expected_runs_at_five_replicates": 75,
+  "conditions": {
+    "neutral": {
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null
+    },
+    "negative_first": {
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null
+    },
+    "positive_first": {
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null
+    },
+    "commit_a": {
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A"
+    },
+    "commit_b": {
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B"
+    }
+  },
+  "orders": {
+    "neutral": [
+      [
+        1,
+        4
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "negative_first": [
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "positive_first": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "cells": [
+    {
+      "case_id": "C1",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C1-F1",
+        "C1-F4",
+        "C1-F5",
+        "C1-F2",
+        "C1-F3",
+        "C1-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "d6a25791e09cb11bfc8bae091db3f8768ebdce6d8a30574b68809074bd19ca80",
+      "transcript_sha256": "632d77ad42dfae2549262a89b0ae66c4fd35f5d62310e1b8b87703bc8fa75863"
+    },
+    {
+      "case_id": "C1",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C1-F4",
+        "C1-F5",
+        "C1-F6",
+        "C1-F1",
+        "C1-F2",
+        "C1-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "d6a25791e09cb11bfc8bae091db3f8768ebdce6d8a30574b68809074bd19ca80",
+      "transcript_sha256": "1aa2c44933cf2db9444aa1cef001384a25393c101be61cf6f5b0fed242155e76"
+    },
+    {
+      "case_id": "C1",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C1-F1",
+        "C1-F2",
+        "C1-F3",
+        "C1-F4",
+        "C1-F5",
+        "C1-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "d6a25791e09cb11bfc8bae091db3f8768ebdce6d8a30574b68809074bd19ca80",
+      "transcript_sha256": "3ff334a33ea49114c6f734229b8081912b248315ae5f5dbb441dcad60a5db5f7"
+    },
+    {
+      "case_id": "C1",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "C1-F1",
+        "C1-F2",
+        "C1-F3",
+        "C1-F4",
+        "C1-F5",
+        "C1-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "d6a25791e09cb11bfc8bae091db3f8768ebdce6d8a30574b68809074bd19ca80",
+      "transcript_sha256": "5c5d1051652533ba6263174c6705a6cfeaa2a2979754263b548336bc4befb1e7"
+    },
+    {
+      "case_id": "C1",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "C1-F4",
+        "C1-F5",
+        "C1-F6",
+        "C1-F1",
+        "C1-F2",
+        "C1-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "d6a25791e09cb11bfc8bae091db3f8768ebdce6d8a30574b68809074bd19ca80",
+      "transcript_sha256": "7f15274cb138dbf4436bc34fa9926389f9dd8b2e36c9313d72f58ad37d49b8c0"
+    },
+    {
+      "case_id": "C2",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C2-F1",
+        "C2-F4",
+        "C2-F5",
+        "C2-F2",
+        "C2-F3",
+        "C2-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "da5cac1dc8f0d5e002a39acf591fb51f0150a7b5d4efb0380b9ffe84b2f399ac",
+      "transcript_sha256": "ee004f080821ee7eb4910dde002aa88d3e4cc52bac0ac4db6056550a4d975355"
+    },
+    {
+      "case_id": "C2",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C2-F4",
+        "C2-F5",
+        "C2-F6",
+        "C2-F1",
+        "C2-F2",
+        "C2-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "da5cac1dc8f0d5e002a39acf591fb51f0150a7b5d4efb0380b9ffe84b2f399ac",
+      "transcript_sha256": "0cde3396885b63fe33bc550d47c615c6a29537ef7ae33cb0884b5d785f07d82c"
+    },
+    {
+      "case_id": "C2",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C2-F1",
+        "C2-F2",
+        "C2-F3",
+        "C2-F4",
+        "C2-F5",
+        "C2-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "da5cac1dc8f0d5e002a39acf591fb51f0150a7b5d4efb0380b9ffe84b2f399ac",
+      "transcript_sha256": "922dc8ead29dd075565c51c363f80ee5cae2687bbf85af7074a91b376265be72"
+    },
+    {
+      "case_id": "C2",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "C2-F1",
+        "C2-F2",
+        "C2-F3",
+        "C2-F4",
+        "C2-F5",
+        "C2-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "da5cac1dc8f0d5e002a39acf591fb51f0150a7b5d4efb0380b9ffe84b2f399ac",
+      "transcript_sha256": "f6778c0aa5796701feffc434323dc901f2fb9f25b4b34cbf653a2d62090d83c0"
+    },
+    {
+      "case_id": "C2",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "C2-F4",
+        "C2-F5",
+        "C2-F6",
+        "C2-F1",
+        "C2-F2",
+        "C2-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "da5cac1dc8f0d5e002a39acf591fb51f0150a7b5d4efb0380b9ffe84b2f399ac",
+      "transcript_sha256": "1273960f60db024a74d4fa5fe572e40d1dd5fb027910652b628ea86317f72aee"
+    },
+    {
+      "case_id": "C3",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C3-F1",
+        "C3-F4",
+        "C3-F5",
+        "C3-F2",
+        "C3-F3",
+        "C3-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "0c3cbc357ffd988fe0c93cb2602b6709957de3d7809f5cf208140200c188b728",
+      "transcript_sha256": "2b0505da30029384929e0e1a9fee684affc8961e01f4c995380732128f399059"
+    },
+    {
+      "case_id": "C3",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C3-F4",
+        "C3-F5",
+        "C3-F6",
+        "C3-F1",
+        "C3-F2",
+        "C3-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "0c3cbc357ffd988fe0c93cb2602b6709957de3d7809f5cf208140200c188b728",
+      "transcript_sha256": "8b733c43fbc568a063ef890906a3c9d4996533c9ec7a6d7c3ffad4503f3fd7b5"
+    },
+    {
+      "case_id": "C3",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "C3-F1",
+        "C3-F2",
+        "C3-F3",
+        "C3-F4",
+        "C3-F5",
+        "C3-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "0c3cbc357ffd988fe0c93cb2602b6709957de3d7809f5cf208140200c188b728",
+      "transcript_sha256": "0a9aef1efec9b266efc2b1ed7482decfdb0929bf059b7a9b479419ed3a915d43"
+    },
+    {
+      "case_id": "C3",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "C3-F1",
+        "C3-F2",
+        "C3-F3",
+        "C3-F4",
+        "C3-F5",
+        "C3-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "0c3cbc357ffd988fe0c93cb2602b6709957de3d7809f5cf208140200c188b728",
+      "transcript_sha256": "323a747959d8cd1335ad4ddd1d2f26eabbdef50fe27ac8b15a874b83b8737878"
+    },
+    {
+      "case_id": "C3",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "C3-F4",
+        "C3-F5",
+        "C3-F6",
+        "C3-F1",
+        "C3-F2",
+        "C3-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "0c3cbc357ffd988fe0c93cb2602b6709957de3d7809f5cf208140200c188b728",
+      "transcript_sha256": "7f1ae33dc4836aa3f689dc044dd419b155a3b1ec5354ca0c067c96c91dafb47d"
+    }
+  ]
+}
