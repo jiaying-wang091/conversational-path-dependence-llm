@@ -1,0 +1,752 @@
+{
+  "valid": true,
+  "errors": [],
+  "phase": "1B",
+  "variant_count": 6,
+  "condition_count": 5,
+  "cell_count": 30,
+  "expected_runs_at_five_replicates": 150,
+  "conditions": {
+    "neutral": {
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null
+    },
+    "negative_first": {
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null
+    },
+    "positive_first": {
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null
+    },
+    "commit_a": {
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A"
+    },
+    "commit_b": {
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B"
+    }
+  },
+  "orders": {
+    "neutral": [
+      [
+        1,
+        4
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "negative_first": [
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "positive_first": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "diagnosticity": [
+    {
+      "variant_id": "LA",
+      "ambiguity_level": "low",
+      "baseline_polarity": "A",
+      "scores": [
+        3,
+        3,
+        2,
+        -1,
+        -1,
+        -1
+      ],
+      "net_score": 5,
+      "absolute_net_score": 5,
+      "total_absolute_evidence_strength": 11
+    },
+    {
+      "variant_id": "LB",
+      "ambiguity_level": "low",
+      "baseline_polarity": "B",
+      "scores": [
+        1,
+        1,
+        1,
+        -2,
+        -3,
+        -3
+      ],
+      "net_score": -5,
+      "absolute_net_score": 5,
+      "total_absolute_evidence_strength": 11
+    },
+    {
+      "variant_id": "MA",
+      "ambiguity_level": "medium",
+      "baseline_polarity": "A",
+      "scores": [
+        2,
+        2,
+        2,
+        -1,
+        -1,
+        -2
+      ],
+      "net_score": 2,
+      "absolute_net_score": 2,
+      "total_absolute_evidence_strength": 10
+    },
+    {
+      "variant_id": "MB",
+      "ambiguity_level": "medium",
+      "baseline_polarity": "B",
+      "scores": [
+        2,
+        1,
+        1,
+        -2,
+        -2,
+        -2
+      ],
+      "net_score": -2,
+      "absolute_net_score": 2,
+      "total_absolute_evidence_strength": 10
+    },
+    {
+      "variant_id": "HA",
+      "ambiguity_level": "high",
+      "baseline_polarity": "A",
+      "scores": [
+        2,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "net_score": 1,
+      "absolute_net_score": 1,
+      "total_absolute_evidence_strength": 7
+    },
+    {
+      "variant_id": "HB",
+      "ambiguity_level": "high",
+      "baseline_polarity": "B",
+      "scores": [
+        1,
+        1,
+        1,
+        -2,
+        -1,
+        -1
+      ],
+      "net_score": -1,
+      "absolute_net_score": 1,
+      "total_absolute_evidence_strength": 7
+    }
+  ],
+  "polarity_pair_symmetry": [
+    {
+      "ambiguity_level": "low",
+      "a_variant": "LA",
+      "b_variant": "LB",
+      "a_net_score": 5,
+      "b_net_score": -5,
+      "absolute_net_score": 5,
+      "total_absolute_evidence_strength": 11,
+      "symmetric": true
+    },
+    {
+      "ambiguity_level": "medium",
+      "a_variant": "MA",
+      "b_variant": "MB",
+      "a_net_score": 2,
+      "b_net_score": -2,
+      "absolute_net_score": 2,
+      "total_absolute_evidence_strength": 10,
+      "symmetric": true
+    },
+    {
+      "ambiguity_level": "high",
+      "a_variant": "HA",
+      "b_variant": "HB",
+      "a_net_score": 1,
+      "b_net_score": -1,
+      "absolute_net_score": 1,
+      "total_absolute_evidence_strength": 7,
+      "symmetric": true
+    }
+  ],
+  "cells": [
+    {
+      "variant_id": "LA",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LA-F1",
+        "LA-F4",
+        "LA-F5",
+        "LA-F2",
+        "LA-F3",
+        "LA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "de733cdfe896fb82cf5f2200e0b61480d2f4d8b64b9194570c99bc0608be0293",
+      "transcript_sha256": "f907a920f650a6dd3ee7001a4840955b4ee95ffd3433b5b69d713deaaf94a91d"
+    },
+    {
+      "variant_id": "LA",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LA-F4",
+        "LA-F5",
+        "LA-F6",
+        "LA-F1",
+        "LA-F2",
+        "LA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "de733cdfe896fb82cf5f2200e0b61480d2f4d8b64b9194570c99bc0608be0293",
+      "transcript_sha256": "dfddc2006183b7a8c8233799b33214e7caa653d738eabaa6f28dc66ef37e4fe1"
+    },
+    {
+      "variant_id": "LA",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LA-F1",
+        "LA-F2",
+        "LA-F3",
+        "LA-F4",
+        "LA-F5",
+        "LA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "de733cdfe896fb82cf5f2200e0b61480d2f4d8b64b9194570c99bc0608be0293",
+      "transcript_sha256": "2f886aaf152ab3ecde8b4210292bb0358c074775b517ecf36a7542e7024a57c5"
+    },
+    {
+      "variant_id": "LA",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "LA-F1",
+        "LA-F2",
+        "LA-F3",
+        "LA-F4",
+        "LA-F5",
+        "LA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "de733cdfe896fb82cf5f2200e0b61480d2f4d8b64b9194570c99bc0608be0293",
+      "transcript_sha256": "2bc1bf7c5caee3dbd8f0047e928415b63c9c44a6d8b7429713f3749a0e1ec0ef"
+    },
+    {
+      "variant_id": "LA",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "LA-F4",
+        "LA-F5",
+        "LA-F6",
+        "LA-F1",
+        "LA-F2",
+        "LA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "de733cdfe896fb82cf5f2200e0b61480d2f4d8b64b9194570c99bc0608be0293",
+      "transcript_sha256": "fb86e6dfb81466adbb565e5675125dffd9bace09f77d8051624816ab2c1cea55"
+    },
+    {
+      "variant_id": "LB",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LB-F1",
+        "LB-F4",
+        "LB-F5",
+        "LB-F2",
+        "LB-F3",
+        "LB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "970aa508ab1dd5b4c0700b46db142da8759d53a94600ae801579d78873f7340a",
+      "transcript_sha256": "05e075c9ea8dc00ba2a03543621fb3b389df191c3c300c13d43644123a20032a"
+    },
+    {
+      "variant_id": "LB",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LB-F4",
+        "LB-F5",
+        "LB-F6",
+        "LB-F1",
+        "LB-F2",
+        "LB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "970aa508ab1dd5b4c0700b46db142da8759d53a94600ae801579d78873f7340a",
+      "transcript_sha256": "67262ce22f17a133ed472ffd4bd52e22d1f6d1f9fdb26541ff4d536d164a35ff"
+    },
+    {
+      "variant_id": "LB",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "LB-F1",
+        "LB-F2",
+        "LB-F3",
+        "LB-F4",
+        "LB-F5",
+        "LB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "970aa508ab1dd5b4c0700b46db142da8759d53a94600ae801579d78873f7340a",
+      "transcript_sha256": "6c704d4c99b8c3c75511c732737e77d4a5585c33c900e2d795fee4eec450c185"
+    },
+    {
+      "variant_id": "LB",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "LB-F1",
+        "LB-F2",
+        "LB-F3",
+        "LB-F4",
+        "LB-F5",
+        "LB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "970aa508ab1dd5b4c0700b46db142da8759d53a94600ae801579d78873f7340a",
+      "transcript_sha256": "4370dc1173d9c8cd33b09868bf06301782a9fea41637cc0959bda8e1d387d8b3"
+    },
+    {
+      "variant_id": "LB",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "LB-F4",
+        "LB-F5",
+        "LB-F6",
+        "LB-F1",
+        "LB-F2",
+        "LB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "970aa508ab1dd5b4c0700b46db142da8759d53a94600ae801579d78873f7340a",
+      "transcript_sha256": "e557cb9243d542233ec1a773a749b10fb196e6f84e19ecf27fcdc832e126c489"
+    },
+    {
+      "variant_id": "MA",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MA-F1",
+        "MA-F4",
+        "MA-F5",
+        "MA-F2",
+        "MA-F3",
+        "MA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "bbe5cfed5f737922be92e9a78b79aac0f690f590041d9c2aa5c38bb1eb3f5c56",
+      "transcript_sha256": "ceb981ab2199c4bea95845e7e2f0bb7588360f87d86964d5e7a2f40c78fd584a"
+    },
+    {
+      "variant_id": "MA",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MA-F4",
+        "MA-F5",
+        "MA-F6",
+        "MA-F1",
+        "MA-F2",
+        "MA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "bbe5cfed5f737922be92e9a78b79aac0f690f590041d9c2aa5c38bb1eb3f5c56",
+      "transcript_sha256": "63c29a9f570084bc9682de67a42533f5b8f46ad5cd90ebc086c6798c27d37f9d"
+    },
+    {
+      "variant_id": "MA",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MA-F1",
+        "MA-F2",
+        "MA-F3",
+        "MA-F4",
+        "MA-F5",
+        "MA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "bbe5cfed5f737922be92e9a78b79aac0f690f590041d9c2aa5c38bb1eb3f5c56",
+      "transcript_sha256": "07f03a7baf9e25f6d9be02d291293ad372b08b71deb48c815e11516f2108c5f5"
+    },
+    {
+      "variant_id": "MA",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "MA-F1",
+        "MA-F2",
+        "MA-F3",
+        "MA-F4",
+        "MA-F5",
+        "MA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "bbe5cfed5f737922be92e9a78b79aac0f690f590041d9c2aa5c38bb1eb3f5c56",
+      "transcript_sha256": "3ebede289909cce423cdd9c45f6aefbed5ff8635c8e75315adfb66c81b6b297a"
+    },
+    {
+      "variant_id": "MA",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "MA-F4",
+        "MA-F5",
+        "MA-F6",
+        "MA-F1",
+        "MA-F2",
+        "MA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "bbe5cfed5f737922be92e9a78b79aac0f690f590041d9c2aa5c38bb1eb3f5c56",
+      "transcript_sha256": "9d6bc83f1d1e2faa5cef9671aadce5a2616c3493c443b7e75a54fc71aa6a0fc4"
+    },
+    {
+      "variant_id": "MB",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MB-F1",
+        "MB-F4",
+        "MB-F5",
+        "MB-F2",
+        "MB-F3",
+        "MB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "077ce4c16c335afb243a283f2e3ed8eedfc4203c241d2049d83859503ff7ca73",
+      "transcript_sha256": "73de3649de5e89ea545c4b0169da6cf13958e926b79cf32f899aeeecd3640aec"
+    },
+    {
+      "variant_id": "MB",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MB-F4",
+        "MB-F5",
+        "MB-F6",
+        "MB-F1",
+        "MB-F2",
+        "MB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "077ce4c16c335afb243a283f2e3ed8eedfc4203c241d2049d83859503ff7ca73",
+      "transcript_sha256": "968b92aec536f231b72cf67571868877840b80dcd6c911dadb5913d2e67189ef"
+    },
+    {
+      "variant_id": "MB",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "MB-F1",
+        "MB-F2",
+        "MB-F3",
+        "MB-F4",
+        "MB-F5",
+        "MB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "077ce4c16c335afb243a283f2e3ed8eedfc4203c241d2049d83859503ff7ca73",
+      "transcript_sha256": "ac1225c971313ee9e9e94abc09fc2159bb23c6f5fec6aec7c9bb7478e0de7cd3"
+    },
+    {
+      "variant_id": "MB",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "MB-F1",
+        "MB-F2",
+        "MB-F3",
+        "MB-F4",
+        "MB-F5",
+        "MB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "077ce4c16c335afb243a283f2e3ed8eedfc4203c241d2049d83859503ff7ca73",
+      "transcript_sha256": "1f7855c2a0c780dfbfe0db09c64c56504f440b3e3d254c0200ef21b3f5d2a922"
+    },
+    {
+      "variant_id": "MB",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "MB-F4",
+        "MB-F5",
+        "MB-F6",
+        "MB-F1",
+        "MB-F2",
+        "MB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "077ce4c16c335afb243a283f2e3ed8eedfc4203c241d2049d83859503ff7ca73",
+      "transcript_sha256": "819d6b4c90571210e8fd819d525df414b2f5be7b7e93518630620235d8b2cc49"
+    },
+    {
+      "variant_id": "HA",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HA-F1",
+        "HA-F4",
+        "HA-F5",
+        "HA-F2",
+        "HA-F3",
+        "HA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "7aef020b0bcfd84041d4dff39d9520517a14b735f8faab2fca5a7d3395eb7ba2",
+      "transcript_sha256": "3c735fbfdec23129bb5f2bfb3ce60575cfaa7f17c095de03a6b04984a76aff64"
+    },
+    {
+      "variant_id": "HA",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HA-F4",
+        "HA-F5",
+        "HA-F6",
+        "HA-F1",
+        "HA-F2",
+        "HA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "7aef020b0bcfd84041d4dff39d9520517a14b735f8faab2fca5a7d3395eb7ba2",
+      "transcript_sha256": "637923bebf4ff4100200b7531d3965ef3c35c29a545da70cedd795dea60fc3e2"
+    },
+    {
+      "variant_id": "HA",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HA-F1",
+        "HA-F2",
+        "HA-F3",
+        "HA-F4",
+        "HA-F5",
+        "HA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "7aef020b0bcfd84041d4dff39d9520517a14b735f8faab2fca5a7d3395eb7ba2",
+      "transcript_sha256": "57982c0cb16dbe593b00d87a961a5e14e0fc35abbf2538ddbc0fa0e178b6b08a"
+    },
+    {
+      "variant_id": "HA",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "HA-F1",
+        "HA-F2",
+        "HA-F3",
+        "HA-F4",
+        "HA-F5",
+        "HA-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "7aef020b0bcfd84041d4dff39d9520517a14b735f8faab2fca5a7d3395eb7ba2",
+      "transcript_sha256": "cc5f66773cb2a86939b8db2a63972d25f95931aab3f3bc6641df87f85c4fa972"
+    },
+    {
+      "variant_id": "HA",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "HA-F4",
+        "HA-F5",
+        "HA-F6",
+        "HA-F1",
+        "HA-F2",
+        "HA-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "7aef020b0bcfd84041d4dff39d9520517a14b735f8faab2fca5a7d3395eb7ba2",
+      "transcript_sha256": "344e936fd8deec30fef1d07945f7c59aa4f68f3dc5fcf796b92364d5ecd04318"
+    },
+    {
+      "variant_id": "HB",
+      "condition_id": "neutral",
+      "order_id": "neutral",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HB-F1",
+        "HB-F4",
+        "HB-F5",
+        "HB-F2",
+        "HB-F3",
+        "HB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "1c2599ef44c2fe3f0212bbd5e47c86971a277fae6100a23065f2a398636b10a8",
+      "transcript_sha256": "d1f6cfb71555a300b5d6c128c4da48a971a97844249419f6dde992892481a39b"
+    },
+    {
+      "variant_id": "HB",
+      "condition_id": "negative_first",
+      "order_id": "negative_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HB-F4",
+        "HB-F5",
+        "HB-F6",
+        "HB-F1",
+        "HB-F2",
+        "HB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "1c2599ef44c2fe3f0212bbd5e47c86971a277fae6100a23065f2a398636b10a8",
+      "transcript_sha256": "214a3eadc6f24b0bd58275097961bae14811240554624ab594e0aa282ad6e2e0"
+    },
+    {
+      "variant_id": "HB",
+      "condition_id": "positive_first",
+      "order_id": "positive_first",
+      "commitment": null,
+      "fact_ids_in_order": [
+        "HB-F1",
+        "HB-F2",
+        "HB-F3",
+        "HB-F4",
+        "HB-F5",
+        "HB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "1c2599ef44c2fe3f0212bbd5e47c86971a277fae6100a23065f2a398636b10a8",
+      "transcript_sha256": "b4478a8c01f1daf3fbcd1def452132956423117711045ab32777dfcac88c331c"
+    },
+    {
+      "variant_id": "HB",
+      "condition_id": "commit_a",
+      "order_id": "positive_first",
+      "commitment": "A",
+      "fact_ids_in_order": [
+        "HB-F1",
+        "HB-F2",
+        "HB-F3",
+        "HB-F4",
+        "HB-F5",
+        "HB-F6"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "1c2599ef44c2fe3f0212bbd5e47c86971a277fae6100a23065f2a398636b10a8",
+      "transcript_sha256": "e5cc2fcae4d957a4358aa354745bf210cfb458c3237a685d880bed0c77463ada"
+    },
+    {
+      "variant_id": "HB",
+      "condition_id": "commit_b",
+      "order_id": "negative_first",
+      "commitment": "B",
+      "fact_ids_in_order": [
+        "HB-F4",
+        "HB-F5",
+        "HB-F6",
+        "HB-F1",
+        "HB-F2",
+        "HB-F3"
+      ],
+      "all_fact_ids_once": true,
+      "verbatim_complete_fact_set": true,
+      "canonical_fact_set_sha256": "1c2599ef44c2fe3f0212bbd5e47c86971a277fae6100a23065f2a398636b10a8",
+      "transcript_sha256": "eda8100a3563072878bd59e10095241919be29a41048d0b06622540fd519702d"
+    }
+  ]
+}

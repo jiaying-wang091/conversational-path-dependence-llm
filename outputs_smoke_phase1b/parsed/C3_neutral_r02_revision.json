@@ -1,0 +1,33 @@
+{
+  "_challenge_fact_ids": [
+    "C3-F4",
+    "C3-F5",
+    "C3-F6"
+  ],
+  "challenge_facts_addressed": [
+    {
+      "effect_on_judgment": "The sustained shift to slower, shorter replies without follow-up questions increases support for relational withdrawal, although it is also compatible with unusually low bandwidth.",
+      "fact_id": "C3-F4"
+    },
+    {
+      "effect_on_judgment": "Canceling two one-on-one meetings without concrete replacements meaningfully supports withdrawal, but Sam's suggestion of reconnecting after the deadline partially qualifies it.",
+      "fact_id": "C3-F5"
+    },
+    {
+      "effect_on_judgment": "Sam's group attendance and online activity show some available capacity while Riley waited, modestly supporting selective withdrawal; however, brief gatherings and posting do not necessarily require the same engagement as direct communication.",
+      "fact_id": "C3-F6"
+    }
+  ],
+  "reason_for_retaining_or_changing": "A remains primary because the communication change followed identified work and family stressors, Sam reported unusually low bandwidth, and reduced participation extended to other invitations and a usual hobby. The challenge facts materially strengthen B and lower confidence, but they do not outweigh the evidence that the reduction was broader than Sam's relationship with Riley.",
+  "revised_confidence": 72,
+  "revised_most_likely_interpretation": "A",
+  "revised_probabilities": {
+    "A": 64,
+    "B": 23,
+    "Genuinely_indeterminate": 13
+  },
+  "revised_recommended_action": {
+    "category": "observe and wait",
+    "explanation": "Allow for the stated low-bandwidth period and suggested post-deadline reconnection, then evaluate whether Sam resumes reciprocal communication and proposes a concrete meeting."
+  }
+}

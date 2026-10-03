@@ -1,0 +1,46 @@
+{
+  "confidence": 82,
+  "evidence_against": [
+    {
+      "fact_id": "LA-F5",
+      "relevance": "Alex has not explicitly identified the interest or meetings as romantic and has not initiated explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "LA-F4",
+      "relevance": "Alex is generally friendly and checks in on others, so some attentive behavior could reflect a broader interpersonal style."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LA-F1",
+      "relevance": "Repeated one-on-one invitations, including evening dinners, and proposing each next meeting indicate sustained, proactive interest."
+    },
+    {
+      "fact_id": "LA-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing only Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "LA-F3",
+      "relevance": "Lengthy post-event conversations about personal topics and suggestions for future shared activities support interest beyond ordinary group interaction."
+    },
+    {
+      "fact_id": "LA-F4",
+      "relevance": "Alex's lack of comparable one-on-one plans or individualized gestures toward other group members makes general friendliness a less complete explanation."
+    },
+    {
+      "fact_id": "LA-F6",
+      "relevance": "Immediately offering a specific replacement date after postponing supports continued motivation to meet Jordan."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 76,
+    "B": 16,
+    "Genuinely_indeterminate": 8
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern supports special or potentially romantic interest, but LA-F5 leaves its nature unconfirmed; a direct, low-pressure clarification would reduce ambiguity."
+  },
+  "uncertainty_explanation": "The repeated and comparatively individualized attention strongly favors A, especially given LA-F4, but the absence of explicit romantic communication in LA-F5 means close friendship or non-romantic special interest remains possible."
+}

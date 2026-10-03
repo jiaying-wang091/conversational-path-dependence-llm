@@ -1,0 +1,5 @@
+classification,expected_direction,high,low,medium,metric
+fully_monotonic,low <= medium <= high,0.12,0.017499999999999988,0.03499999999999998,commitment_sensitivity
+partially_ordered,low <= medium <= high,0.030000000000000006,0.020000000000000018,0.009999999999999981,order_sensitivity
+partially_ordered,low <= medium <= high,0.015000000000000003,0.015000000000000013,0.05000000000000003,salience_sensitivity
+fully_monotonic,low > medium > high,0.20500000000000002,0.69,0.37,neutral_absolute_d_manipulation_check

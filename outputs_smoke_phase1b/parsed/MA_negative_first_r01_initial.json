@@ -1,0 +1,46 @@
+{
+  "confidence": 64,
+  "evidence_against": [
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex also checks in on several group members, brings others treats, and has made one-on-one plans with another friend, so some behavior may reflect general friendliness."
+    },
+    {
+      "fact_id": "MA-F5",
+      "relevance": "There has been no explicit romantic labeling, romantic physical contact, or direct statement of romantic interest."
+    },
+    {
+      "fact_id": "MA-F6",
+      "relevance": "Postponing two dinners without offering a concrete replacement date the following week weakens the inference of active romantic pursuit."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MA-F1",
+      "relevance": "Alex repeatedly initiated varied one-on-one plans with Jordan over ten weeks."
+    },
+    {
+      "fact_id": "MA-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "MA-F3",
+      "relevance": "Repeated extended private conversations after group events, including discussion of future activities together, support special interest."
+    },
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Although Alex is generally friendly, making one-on-one plans with only one other friend makes the repeated plans with Jordan somewhat distinctive."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 55,
+    "B": 27,
+    "Genuinely_indeterminate": 18
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern supports possible special or romantic interest, but the lack of explicit signals and the postponed dinners leave meaningful ambiguity; a low-pressure direct clarification would resolve it."
+  },
+  "uncertainty_explanation": "Alex's repeated one-on-one initiatives and sustained individualized attention favor A, but Alex's broader friendliness, absence of explicit romantic behavior, and failure to promptly reschedule two dinners prevent a strong conclusion."
+}

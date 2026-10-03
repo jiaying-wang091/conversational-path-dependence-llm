@@ -1,0 +1,46 @@
+{
+  "confidence": 82,
+  "evidence_against": [
+    {
+      "fact_id": "LA-F5",
+      "relevance": "Alex has not explicitly identified the interest or meetings as romantic and has not initiated explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "LA-F4",
+      "relevance": "Alex is generally friendly and checks in on others, so some behavior could reflect a friendly interpersonal style."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LA-F1",
+      "relevance": "Repeated one-on-one invitations, including evening dinners, and proposing each next meeting indicate sustained, proactive interest."
+    },
+    {
+      "fact_id": "LA-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing only Jordan a preferred item show individualized attention."
+    },
+    {
+      "fact_id": "LA-F3",
+      "relevance": "Lengthy post-event conversations about personal topics and suggestions for future shared activities support special interest."
+    },
+    {
+      "fact_id": "LA-F4",
+      "relevance": "Alex's lack of comparable plans or gestures toward other group members makes general friendliness a less complete explanation."
+    },
+    {
+      "fact_id": "LA-F6",
+      "relevance": "Immediately offering a specific replacement date after postponing demonstrates continued investment in meeting Jordan."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 76,
+    "B": 14,
+    "Genuinely_indeterminate": 10
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern supports special or potentially romantic interest, but direct clarification is the clearest way to resolve the remaining ambiguity."
+  },
+  "uncertainty_explanation": "The repeated and comparatively individualized attention makes A better supported than B, but LA-F5 leaves uncertainty about whether Alex's special interest is specifically romantic rather than close friendship."
+}

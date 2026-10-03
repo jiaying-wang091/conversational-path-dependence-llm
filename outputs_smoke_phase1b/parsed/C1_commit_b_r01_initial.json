@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one plans with Jordan, which could indicate special interest."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeatedly continuing conversations with Jordan for thirty to sixty minutes after group events suggests sustained individual interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex shows similar warmth, gives treats, and makes one-on-one plans with other friends, so the behavior toward Jordan is not clearly special."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "Across ten weeks, Alex did not label either outing a date, express romantic interest, or initiate explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not suggest a replacement date during the next two weeks."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 24,
+    "B": 58,
+    "Genuinely_indeterminate": 18
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The record supports friendliness more than romantic interest, but the personalized attention leaves some ambiguity; further behavior may clarify whether Alex consistently prioritizes one-on-one contact."
+  },
+  "uncertainty_explanation": "Alex's repeated one-on-one engagement and personalized gestures could reflect special interest, but Alex behaves warmly with others and has provided no explicit romantic signal. The postponed dinner without a replacement date further weakens Interpretation A."
+}

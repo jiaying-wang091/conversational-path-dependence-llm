@@ -8,6 +8,6 @@
   "replicates": 5,
   "seed": null,
   "randomization_seed": 20260929,
-  "output_root": "outputs",
+  "output_root": "outputs_phase1b",
   "base_url": "https://api.openai.com/v1"
 }

@@ -1,0 +1,46 @@
+{
+  "confidence": 64,
+  "evidence_against": [
+    {
+      "fact_id": "HB-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and including Jordan's preferred tea show attentiveness that could support special interest."
+    },
+    {
+      "fact_id": "HB-F3",
+      "relevance": "Repeated extended texting that included personal updates could indicate interest beyond ordinary group interaction."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Alex did initiate one one-on-one coffee outing, which is compatible with special interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HB-F4",
+      "relevance": "Alex is broadly warm, checks in on several group members, and makes occasional one-on-one plans with other friends, so the behavior toward Jordan is not clearly distinctive."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex has not framed either outing as a date or initiated explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "HB-F6",
+      "relevance": "After postponing Jordan's dinner proposal, Alex expressed general willingness but did not offer a specific alternative time."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Only one of the two one-on-one outings was suggested by Alex, which provides limited evidence of special pursuit."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 55,
+    "Genuinely_indeterminate": 23
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The record better fits general friendliness, but the personal texting and attentiveness leave some possibility of special interest; future initiative and specificity may clarify the pattern."
+  },
+  "uncertainty_explanation": "The evidence is mixed: Alex gives Jordan individualized attention and sustains personal conversations, but similar warmth and one-on-one planning extend to others, and there is no explicit romantic framing or clear follow-through on the proposed dinner."
+}

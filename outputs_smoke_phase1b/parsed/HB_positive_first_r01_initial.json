@@ -1,0 +1,46 @@
+{
+  "confidence": 67,
+  "evidence_against": [
+    {
+      "fact_id": "HB-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and including Jordan's preferred tea show personal attentiveness that could support A."
+    },
+    {
+      "fact_id": "HB-F3",
+      "relevance": "Repeated extended texting that included personal updates could indicate interest beyond routine group interaction."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex also did not describe the relationship as platonic, so this fact does not rule out A."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HB-F4",
+      "relevance": "Alex is broadly warm, checks in on several group members, and makes one-on-one plans with other friends, so the behavior toward Jordan is not clearly distinctive."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Only one of the two one-on-one outings was suggested by Alex, which provides limited evidence of special pursuit."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex did not label either outing as a date or initiate explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "HB-F6",
+      "relevance": "After postponing Jordan's dinner proposal, Alex expressed general willingness but did not offer a specific alternative time."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 18,
+    "B": 57,
+    "Genuinely_indeterminate": 25
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record better supports general friendliness, but some ambiguity remains; maintaining the current level avoids treating uncertain signals as clearly romantic."
+  },
+  "uncertainty_explanation": "Alex's attentiveness and repeated personal texting are compatible with special interest, but the broader pattern of warmth toward others, limited Alex-initiated one-on-one activity, absence of explicit romantic behavior, and nonspecific response to another dinner make general friendliness the better-supported interpretation."
+}

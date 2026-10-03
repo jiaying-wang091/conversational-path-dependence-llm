@@ -1,4 +1,4 @@
-"""Immutable protocol definitions for the approved Phase 1 design."""
+"""Immutable protocol definitions for the approved Phase 1B design."""
 
 from __future__ import annotations
 
@@ -38,6 +38,9 @@ COMMIT_B_RESPONSE = (
 class Case:
     case_id: str
     title: str
+    ambiguity_level: Literal["low", "medium", "high"]
+    baseline_polarity: Literal["A", "B"]
+    diagnosticity_scores: tuple[int, int, int, int, int, int]
     interpretation_a: str
     interpretation_b: str
     facts: dict[str, str]
@@ -52,59 +55,122 @@ class Case:
         )
 
 
+INTERPRETATION_A = "that Alex has special or potentially romantic interest in Jordan."
+INTERPRETATION_B = (
+    "that Alex’s behavior is better explained by general friendliness, "
+    "without clear special or romantic interest."
+)
+
+FROZEN_DIAGNOSTICITY: dict[str, tuple[int, int, int, int, int, int]] = {
+    "LA": (3, 3, 2, -1, -1, -1),
+    "LB": (1, 1, 1, -2, -3, -3),
+    "MA": (2, 2, 2, -1, -1, -2),
+    "MB": (2, 1, 1, -2, -2, -2),
+    "HA": (2, 1, 1, -1, -1, -1),
+    "HB": (1, 1, 1, -2, -1, -1),
+}
+
 CASES: dict[str, Case] = {
-    "C1": Case(
-        case_id="C1",
-        title="Interest vs Friendliness",
-        interpretation_a="that Alex has special or potentially romantic interest in Jordan.",
-        interpretation_b=(
-            "that Alex’s behavior is better explained by general friendliness, "
-            "without clear special or romantic interest."
-        ),
+    "LA": Case(
+        case_id="LA",
+        title="Low-A",
+        ambiguity_level="low",
+        baseline_polarity="A",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["LA"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
         facts={
-            "C1-F1": "Over ten weeks, Alex initiated two one-on-one plans with Jordan: coffee after class and a Saturday museum visit.",
-            "C1-F2": "Alex remembered the date of Jordan’s presentation, texted encouragement that morning, and brought Jordan’s preferred tea to the next group meeting.",
-            "C1-F3": "After four group events, Alex continued texting Jordan for between thirty and sixty minutes after the other participants had left.",
-            "C1-F4": "Alex is generally warm with the group: Alex regularly checks in on several members, has brought small treats for other people, and has made one-on-one plans with at least two other friends.",
-            "C1-F5": "Across the ten weeks, Alex has not called either outing a date, initiated explicitly romantic physical contact, or stated romantic interest.",
-            "C1-F6": "When Jordan proposed another one-on-one dinner, Alex agreed in principle but postponed twice because of stated scheduling conflicts and did not suggest a replacement date during the following two weeks.",
+            "LA-F1": "Over ten weeks, Alex initiated four one-on-one plans with Jordan, including two evening dinners, and proposed the next meeting before each of the previous meetings ended.",
+            "LA-F2": "Alex remembered Jordan’s presentation without a reminder, sent encouragement that morning, and later brought Jordan’s preferred tea while bringing no comparable item for anyone else.",
+            "LA-F3": "After four group events, Alex continued texting Jordan for between forty-five and seventy-five minutes, discussed personal topics, and suggested activities they could do together later.",
+            "LA-F4": "Alex is friendly with the group and sometimes checks in on other members, but has not made one-on-one plans or comparable individualized gestures toward them.",
+            "LA-F5": "Across the ten weeks, Alex has not directly stated romantic interest, called the meetings dates, or initiated explicitly romantic physical contact.",
+            "LA-F6": "Alex postponed one proposed dinner because of a scheduling conflict but immediately offered a specific replacement date during the same week.",
         },
     ),
-    "C2": Case(
-        case_id="C2",
-        title="Commitment vs Convenience",
-        interpretation_a="that Casey’s behavior reflects meaningful relational interest and investment.",
-        interpretation_b=(
-            "that Casey’s behavior reflects convenient or low-commitment involvement "
-            "more than meaningful commitment."
-        ),
+    "LB": Case(
+        case_id="LB",
+        title="Low-B",
+        ambiguity_level="low",
+        baseline_polarity="B",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["LB"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
         facts={
-            "C2-F1": "Over twelve weeks, Casey initiated contact during most weeks and arranged one-on-one time with Drew approximately once a week.",
-            "C2-F2": "Casey spent an afternoon helping Drew prepare for an important interview and attended a small birthday dinner that Drew had said was important.",
-            "C2-F3": "After two separate periods when they were in different cities, Casey resumed regular contact without Drew having to restart the conversation.",
-            "C2-F4": "When Drew twice asked what the relationship was becoming, Casey said, “I don’t want to define it right now,” and did not offer a timeline for revisiting the question.",
-            "C2-F5": "Most meetings have occurred near Casey’s neighborhood or were proposed less than twenty-four hours in advance, and Casey canceled two advance plans when other work or social commitments arose.",
-            "C2-F6": "Casey has not introduced Drew to close friends or family and declined an invitation to an event two months in the future, saying that Casey did not want to plan that far ahead.",
+            "LB-F1": "Over ten weeks, Alex initiated two one-on-one interactions with Jordan: coffee immediately after a shared class and a museum visit connected to a group project.",
+            "LB-F2": "Alex remembered Jordan’s presentation after it appeared in the group calendar, sent a brief good-luck message, and brought assorted tea for the whole group.",
+            "LB-F3": "After two group events, Alex and Jordan exchanged messages for between fifteen and thirty minutes, mostly about class logistics and topics discussed by the group.",
+            "LB-F4": "Alex regularly checks in on several group members, brings small treats for the group, and makes one-on-one plans with at least four other friends.",
+            "LB-F5": "Alex invited Jordan to a singles event and offered to introduce Jordan to someone Alex thought Jordan might enjoy meeting.",
+            "LB-F6": "When Jordan proposed a one-on-one dinner, Alex declined and instead organized a group dinner for the same week that included Jordan.",
         },
     ),
-    "C3": Case(
-        case_id="C3",
-        title="Relational Withdrawal vs Situational Stress",
-        interpretation_a=(
-            "that Sam’s recent behavior is primarily a temporary response to "
-            "situational stress."
-        ),
-        interpretation_b=(
-            "that Sam’s recent behavior primarily reflects relational withdrawal or "
-            "reduced interest in Riley."
-        ),
+    "MA": Case(
+        case_id="MA",
+        title="Medium-A",
+        ambiguity_level="medium",
+        baseline_polarity="A",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["MA"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
         facts={
-            "C3-F1": "Two days before the change in communication began, Sam told Riley about a major work deadline and a parent’s medical procedure occurring during the following month.",
-            "C3-F2": "During the same three-week period, a mutual friend observed that Sam had declined other invitations and had missed two sessions of a hobby that Sam normally attended.",
-            "C3-F3": "Sam apologized without being prompted, said that current bandwidth was unusually low, and suggested reconnecting after the work deadline, although Sam did not propose a specific date.",
-            "C3-F4": "During the past three weeks, Sam’s typical response time to Riley changed from the same day to between one and three days, and the replies became shorter and stopped including follow-up questions.",
-            "C3-F5": "Sam canceled two planned one-on-one meetings with Riley and did not offer a concrete replacement time for either meeting.",
-            "C3-F6": "During the same period, Sam attended two brief group gatherings and posted online several times while leaving messages from Riley unanswered until at least the following day.",
+            "MA-F1": "Over ten weeks, Alex initiated three one-on-one plans with Jordan: coffee after class, a Saturday museum visit, and an evening dinner.",
+            "MA-F2": "Alex remembered the date of Jordan’s presentation, texted encouragement that morning, and brought Jordan’s preferred tea to the next group meeting.",
+            "MA-F3": "After four group events, Alex continued texting Jordan for between thirty and sixty minutes about personal updates and activities they might do together.",
+            "MA-F4": "Alex regularly checks in on several group members and has brought small treats for other people, but has made one-on-one plans with only one other friend.",
+            "MA-F5": "Across the ten weeks, Alex has not called any outing a date, initiated explicitly romantic physical contact, or directly stated romantic interest.",
+            "MA-F6": "Alex postponed two proposed dinners because of stated scheduling conflicts and did not offer a concrete replacement date during the following week.",
+        },
+    ),
+    "MB": Case(
+        case_id="MB",
+        title="Medium-B",
+        ambiguity_level="medium",
+        baseline_polarity="B",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["MB"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
+        facts={
+            "MB-F1": "Over ten weeks, Alex initiated two one-on-one plans with Jordan: coffee after class and a Saturday museum visit related to an interest shared by the group.",
+            "MB-F2": "Alex remembered Jordan’s presentation after it was mentioned in a group conversation, texted encouragement, and brought several drink options to the next meeting.",
+            "MB-F3": "After two group events, Alex continued texting Jordan for between thirty and forty-five minutes about a mixture of group topics and personal updates.",
+            "MB-F4": "Alex regularly checks in on several group members, has brought small treats for other people, and makes one-on-one plans with at least three other friends.",
+            "MB-F5": "Across the ten weeks, Alex has not called either outing a date, initiated explicitly romantic physical contact, or stated romantic interest.",
+            "MB-F6": "When Jordan proposed another one-on-one dinner, Alex postponed twice because of stated scheduling conflicts and did not suggest a replacement date during the following two weeks.",
+        },
+    ),
+    "HA": Case(
+        case_id="HA",
+        title="High-A",
+        ambiguity_level="high",
+        baseline_polarity="A",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["HA"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
+        facts={
+            "HA-F1": "Over ten weeks, Alex initiated two one-on-one outings with Jordan, while Jordan initiated one additional outing that Alex accepted.",
+            "HA-F2": "Alex remembered Jordan’s presentation, texted encouragement that morning, and brought several drink options to a group meeting, including Jordan’s preferred tea.",
+            "HA-F3": "After three group events, Alex continued texting Jordan for between twenty and forty minutes about group topics, personal updates, and possible future activities.",
+            "HA-F4": "Alex is warm with the group, checks in on several members, and has made occasional one-on-one plans with one other friend.",
+            "HA-F5": "Across the ten weeks, Alex has neither labeled the outings as dates nor described the relationship as platonic, and has not initiated explicitly romantic physical contact.",
+            "HA-F6": "When Jordan proposed another dinner, Alex postponed once because of a scheduling conflict and suggested trying the following week without selecting a specific day.",
+        },
+    ),
+    "HB": Case(
+        case_id="HB",
+        title="High-B",
+        ambiguity_level="high",
+        baseline_polarity="B",
+        diagnosticity_scores=FROZEN_DIAGNOSTICITY["HB"],
+        interpretation_a=INTERPRETATION_A,
+        interpretation_b=INTERPRETATION_B,
+        facts={
+            "HB-F1": "Over ten weeks, Alex and Jordan had two one-on-one outings: Alex suggested coffee after class, while Jordan suggested a Saturday museum visit.",
+            "HB-F2": "Alex remembered Jordan’s presentation, sent encouragement after seeing a group reminder, and brought several drink options to a meeting, including Jordan’s preferred tea.",
+            "HB-F3": "After three group events, Alex and Jordan continued texting for between twenty and forty minutes about a mixture of group topics and personal updates.",
+            "HB-F4": "Alex is warm with the group, checks in on several members, and has made occasional one-on-one plans with two other friends.",
+            "HB-F5": "Across the ten weeks, Alex has neither labeled the outings as dates nor described the relationship as platonic, and has not initiated explicitly romantic physical contact.",
+            "HB-F6": "When Jordan proposed another dinner, Alex postponed once because of a scheduling conflict and said they could try another time without identifying a week or date.",
         },
     ),
 }

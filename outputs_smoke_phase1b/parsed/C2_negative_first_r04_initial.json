@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey initiated contact most weeks and consistently arranged approximately weekly one-on-one time over twelve weeks."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Helping with an important interview and attending an important birthday dinner show effort and responsiveness to Drew's priorities."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, indicating sustained interest rather than purely passive convenience."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting it, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey canceled advance plans when other commitments arose."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 20,
+    "B": 65,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because Casey shows ongoing interest but repeatedly avoids definition and forward planning, Drew should directly clarify desired commitment and what, if anything, would change."
+  },
+  "uncertainty_explanation": "The record shows genuine consistency and some meaningful effort, but the repeated avoidance of definition, limited advance planning, cancellations, and lack of social integration more strongly support convenient or low-commitment involvement."
+}

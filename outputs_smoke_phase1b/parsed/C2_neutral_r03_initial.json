@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey initiated contact in most weeks and consistently arranged approximately weekly one-on-one time."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Helping with an important interview and attending an important birthday dinner show effort and responsiveness."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, indicating sustained interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting it."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "The location and short notice of most meetings, plus two cancellations for other commitments, indicate convenience and limited prioritization."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 25,
+    "B": 60,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could state the level of commitment and planning desired, ask whether Casey is willing to move toward it, and set a boundary if Casey remains unwilling to clarify."
+  },
+  "uncertainty_explanation": "Casey's regular initiation, practical support, and renewed contact support meaningful interest, but the repeated avoidance of definition, limited advance planning, convenience-oriented meetings, cancellations, and lack of social integration more strongly support low-commitment involvement."
+}

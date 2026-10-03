@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "phase1-conversational-path-dependence"
-version = "0.1.0"
-description = "Reproducible Phase 1 pilot for conversational path dependence in LLM relationship decision support"
+name = "phase1b-conversational-path-dependence"
+version = "0.2.0"
+description = "Reproducible Phase 1B ambiguity pilot for conversational path dependence"
 requires-python = ">=3.11"
 dependencies = []
 
@@ -17,4 +17,3 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
-

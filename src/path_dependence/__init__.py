@@ -1,4 +1,3 @@
-"""Phase 1 conversational path-dependence pilot."""
+"""Phase 1B ambiguity and conversational path-dependence pilot."""
 
-__version__ = "0.1.0"
-
+__version__ = "0.2.0"

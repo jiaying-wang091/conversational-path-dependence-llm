@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey regularly initiated contact and arranged approximately weekly one-on-one time over twelve weeks, indicating sustained interest and effort."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey provided practical support for an important interview and attended a birthday dinner Drew identified as important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, showing continuity of interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting it, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey canceled two advance plans for other commitments."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 63,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could ask Casey what level of involvement Casey is currently willing to offer and whether that aligns with Drew's needs, without assuming unstated intentions."
+  },
+  "uncertainty_explanation": "The record shows consistent contact, initiative, and meaningful supportive acts, but the repeated avoidance of definition, limited advance planning, convenience-weighted meetings, cancellations, and lack of social integration more strongly support B. The facts establish behavior but not Casey's motives."
+}

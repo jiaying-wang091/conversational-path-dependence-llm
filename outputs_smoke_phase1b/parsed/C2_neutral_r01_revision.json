@@ -1,0 +1,33 @@
+{
+  "_challenge_fact_ids": [
+    "C2-F1",
+    "C2-F2",
+    "C2-F3"
+  ],
+  "challenge_facts_addressed": [
+    {
+      "effect_on_judgment": "Casey's repeated initiation and approximately weekly one-on-one planning over twelve weeks provide substantial evidence of sustained relational interest, reducing confidence in B.",
+      "fact_id": "C2-F1"
+    },
+    {
+      "effect_on_judgment": "Helping with an important interview and attending an important birthday dinner show effort and responsiveness to Drew's priorities, supporting A.",
+      "fact_id": "C2-F2"
+    },
+    {
+      "effect_on_judgment": "Casey's independent resumption of regular contact after time apart indicates continuity of interest rather than purely passive involvement, supporting A.",
+      "fact_id": "C2-F3"
+    }
+  ],
+  "reason_for_retaining_or_changing": "B is retained narrowly. C2-F1, C2-F2, and C2-F3 establish meaningful interest and some investment, but C2-F4, C2-F5, and C2-F6 more directly indicate limited commitment: Casey repeatedly avoided defining the relationship, offered no timeline, often favored short-notice or nearby meetings, canceled advance plans for other commitments, did not introduce Drew to close contacts, and declined planning two months ahead.",
+  "revised_confidence": 60,
+  "revised_most_likely_interpretation": "B",
+  "revised_probabilities": {
+    "A": 31,
+    "B": 52,
+    "Genuinely_indeterminate": 17
+  },
+  "revised_recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could clarify what level of commitment and future planning Casey is willing to offer, then set a boundary if that level does not meet Drew's needs."
+  }
+}

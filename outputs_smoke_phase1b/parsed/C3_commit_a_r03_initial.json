@@ -1,0 +1,42 @@
+{
+  "confidence": 76,
+  "evidence_against": [
+    {
+      "fact_id": "C3-F4",
+      "relevance": "Slower, shorter replies without follow-up questions are also consistent with reduced relational interest."
+    },
+    {
+      "fact_id": "C3-F5",
+      "relevance": "Canceling two one-on-one meetings without concrete replacement times weakens the situational-stress interpretation."
+    },
+    {
+      "fact_id": "C3-F6",
+      "relevance": "Attending group gatherings and posting online while delaying replies shows some selective availability, though these activities may require less bandwidth than direct interaction."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C3-F1",
+      "relevance": "Sam identified two substantial, time-limited stressors shortly before the communication change."
+    },
+    {
+      "fact_id": "C3-F2",
+      "relevance": "Reduced participation in other invitations and a usual hobby indicates that the withdrawal was not limited to Riley."
+    },
+    {
+      "fact_id": "C3-F3",
+      "relevance": "Sam independently apologized, described unusually low bandwidth, and linked reconnection to the work deadline."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 65,
+    "B": 22,
+    "Genuinely_indeterminate": 13
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "Respect the stated low bandwidth through the identified deadline, then assess whether Sam follows through on reconnecting; direct clarification would be appropriate if the pattern continues afterward."
+  },
+  "uncertainty_explanation": "The timing, stated stressors, and broader social withdrawal favor A, but the lack of concrete rescheduling and selective availability leave a meaningful possibility of B."
+}

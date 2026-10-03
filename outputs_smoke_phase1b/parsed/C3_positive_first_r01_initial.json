@@ -1,0 +1,42 @@
+{
+  "confidence": 76,
+  "evidence_against": [
+    {
+      "fact_id": "C3-F4",
+      "relevance": "Slower, shorter replies without follow-up questions are also consistent with reduced relational engagement."
+    },
+    {
+      "fact_id": "C3-F5",
+      "relevance": "Canceling two one-on-one meetings without concrete replacement times supports possible withdrawal."
+    },
+    {
+      "fact_id": "C3-F6",
+      "relevance": "Attending group gatherings and posting online while delaying replies shows some selective availability, though it does not establish reduced interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C3-F1",
+      "relevance": "Sam identified a major work deadline and a parent's medical procedure shortly before the communication change."
+    },
+    {
+      "fact_id": "C3-F2",
+      "relevance": "Sam also declined other invitations and missed a normally attended hobby, indicating a broader reduction in availability rather than a change limited to Riley."
+    },
+    {
+      "fact_id": "C3-F3",
+      "relevance": "Sam apologized, described unusually low bandwidth, and suggested reconnecting after the deadline, directly linking the reduced contact to a temporary constraint."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 68,
+    "B": 20,
+    "Genuinely_indeterminate": 12
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "Sam explicitly suggested reconnecting after the work deadline, and the broader reduction in activities supports allowing that stated period to pass before reassessing."
+  },
+  "uncertainty_explanation": "The situational explanation is supported by prior disclosure, broader social withdrawal, and Sam's own statement. However, the sustained decline in responsiveness, canceled meetings without replacements, and selective availability leave a meaningful possibility of relational withdrawal."
+}

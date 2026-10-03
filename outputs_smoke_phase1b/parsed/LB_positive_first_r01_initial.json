@@ -1,0 +1,54 @@
+{
+  "confidence": 88,
+  "evidence_against": [
+    {
+      "fact_id": "LB-F1",
+      "relevance": "Alex did initiate two one-on-one interactions, which could provide limited support for special interest."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "Remembering Jordan's presentation and sending encouragement shows individual attention, though the group calendar and broader group gesture limit its distinctiveness."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "Sustained post-event messaging shows some engagement, although its content was mostly group- and class-related."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LB-F4",
+      "relevance": "Alex shows similar check-ins, treats, and one-on-one planning toward several other people, making the behavior toward Jordan consistent with general friendliness."
+    },
+    {
+      "fact_id": "LB-F5",
+      "relevance": "Inviting Jordan to a singles event and offering an introduction to someone else weighs against Alex signaling personal romantic interest."
+    },
+    {
+      "fact_id": "LB-F6",
+      "relevance": "Alex declined Jordan's proposed one-on-one dinner and substituted a group dinner, which weighs against seeking greater one-on-one intimacy."
+    },
+    {
+      "fact_id": "LB-F1",
+      "relevance": "The two one-on-one interactions were limited and tied to shared class or group-project contexts."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "Their messages were mostly about class logistics and group-discussion topics rather than clearly personal or romantic subjects."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "The good-luck message was brief, and the tea was brought for the whole group rather than specifically for Jordan."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 5,
+    "B": 85,
+    "Genuinely_indeterminate": 10
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record is better explained by general friendliness, so maintaining the current level of engagement is more proportionate than increasing investment based on presumed special interest."
+  },
+  "uncertainty_explanation": "Some individual attention and one-on-one contact leave limited uncertainty, but Alex's similar behavior toward others, matchmaking offer, and redirection of a proposed dinner to a group setting make B substantially better supported."
+}

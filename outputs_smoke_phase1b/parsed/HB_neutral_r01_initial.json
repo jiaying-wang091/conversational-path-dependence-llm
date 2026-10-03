@@ -1,0 +1,46 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "HB-F2",
+      "relevance": "Remembering Jordan's presentation and preferred tea shows personal attentiveness, which could support special interest."
+    },
+    {
+      "fact_id": "HB-F3",
+      "relevance": "Repeated extended texting that included personal updates could indicate interest beyond ordinary group interaction."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Alex did initiate one one-on-one coffee outing, which is compatible with special interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HB-F4",
+      "relevance": "Alex is broadly warm and makes occasional one-on-one plans with other friends, so similar behavior toward Jordan is consistent with general friendliness."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Only one of the two one-on-one outings was suggested by Alex, providing limited evidence of special pursuit."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex has not labeled the outings as dates or initiated explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "HB-F6",
+      "relevance": "After postponing Jordan's dinner proposal, Alex did not identify a specific alternative week or date."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 18,
+    "B": 57,
+    "Genuinely_indeterminate": 25
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The current pattern is more consistent with general friendliness, but the personal attentiveness and continued texting leave some ambiguity. Further behavior may clarify whether Alex initiates more specific one-on-one contact."
+  },
+  "uncertainty_explanation": "The facts show warmth, attentiveness, and some one-on-one interaction, but Alex behaves similarly with others and has not made a clear romantic move or concrete follow-up plan."
+}

@@ -1,0 +1,42 @@
+{
+  "confidence": 78,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey consistently initiated contact and arranged approximately weekly one-on-one time over twelve weeks, indicating sustained interest."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey provided practical support for an important interview and attended a birthday dinner Drew identified as important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, showing continued initiative."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting the question, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey canceled two advance plans for other commitments."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 18,
+    "B": 70,
+    "Genuinely_indeterminate": 12
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because Casey shows sustained interest but avoids definition and longer-term planning, Drew should directly clarify desired commitment and whether or when the relationship question can be revisited."
+  },
+  "uncertainty_explanation": "The record shows genuine consistency, initiative, and support, but the repeated avoidance of definition, limited advance planning, convenience pattern, cancellations, and lack of social integration more strongly support B."
+}

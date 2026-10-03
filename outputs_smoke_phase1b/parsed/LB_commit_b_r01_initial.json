@@ -1,0 +1,54 @@
+{
+  "confidence": 88,
+  "evidence_against": [
+    {
+      "fact_id": "LB-F1",
+      "relevance": "Alex did initiate two one-on-one interactions, which could weakly support special interest."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "Alex sent Jordan an individual good-luck message, which shows some personal attention."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "Post-event message exchanges lasting fifteen to thirty minutes indicate some sustained engagement."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LB-F4",
+      "relevance": "Alex shows similar attention and makes one-on-one plans with several other friends, supporting general friendliness."
+    },
+    {
+      "fact_id": "LB-F5",
+      "relevance": "Inviting Jordan to a singles event and offering an introduction to someone else weighs against Alex pursuing Jordan romantically."
+    },
+    {
+      "fact_id": "LB-F6",
+      "relevance": "Alex declined Jordan's proposed one-on-one dinner and substituted a group dinner."
+    },
+    {
+      "fact_id": "LB-F1",
+      "relevance": "The two initiated one-on-one interactions were limited and tied to shared class or group-project contexts."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "The good-luck message followed a group-calendar reminder, while the tea was for the whole group."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "Their messages mainly concerned class logistics and group-discussion topics."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 7,
+    "B": 83,
+    "Genuinely_indeterminate": 10
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record more strongly supports ordinary friendliness than special or romantic interest, so no increase in investment is warranted from these facts alone."
+  },
+  "uncertainty_explanation": "Some individual attention exists, but it is limited, largely contextual, and outweighed by Alex's similar behavior toward others, the attempted introduction to another person, and the preference for a group dinner."
+}

@@ -7,7 +7,16 @@ import csv
 import json
 from pathlib import Path
 
-from .analysis import case_instability, condition_summaries, planned_contrasts
+from .analysis import (
+    ambiguity_disagreement_summaries,
+    condition_summaries,
+    factorial_interaction_summary,
+    monotonicity_results,
+    neutral_manipulation_checks,
+    planned_contrasts,
+    polarity_pooled_sensitivity,
+    variant_instability,
+)
 from .diagnostics import duplicate_diagnostics
 from .protocol import CASES, CONDITIONS
 from .runner import ExperimentConfig, execute, write_manifest
@@ -107,16 +116,34 @@ def command_analyze(args: argparse.Namespace) -> int:
         raise RuntimeError("Run the score command before analyze")
     summaries = condition_summaries(coded, diagnostics)
     contrasts = planned_contrasts(summaries)
-    instability = case_instability(coded)
-    write_csv(paths["tables"] / "case_condition_summary.csv", summaries)
-    write_csv(paths["tables"] / "planned_contrasts.csv", contrasts)
-    write_csv(paths["tables"] / "case_instability.csv", instability)
+    sensitivity = polarity_pooled_sensitivity(contrasts)
+    manipulation = neutral_manipulation_checks(summaries)
+    monotonicity = monotonicity_results(sensitivity, manipulation)
+    interaction = factorial_interaction_summary(summaries)
+    instability = variant_instability(coded)
+    disagreement = ambiguity_disagreement_summaries(instability)
+    write_csv(paths["tables"] / "variant_condition_summary.csv", summaries)
+    write_csv(paths["tables"] / "within_variant_planned_contrasts.csv", contrasts)
+    write_csv(paths["tables"] / "polarity_pooled_sensitivity.csv", sensitivity)
+    write_csv(paths["tables"] / "neutral_manipulation_checks.csv", manipulation)
+    write_csv(paths["tables"] / "monotonicity_results.csv", monotonicity)
+    write_csv(
+        paths["tables"] / "ambiguity_trajectory_polarity_interaction.csv", interaction
+    )
+    write_csv(paths["tables"] / "variant_instability.csv", instability)
+    write_csv(paths["tables"] / "ambiguity_disagreement_summary.csv", disagreement)
     print(
         json.dumps(
             {
-                "case_condition_rows": len(summaries),
-                "planned_contrasts": len(contrasts),
-                "case_instability_rows": len(instability),
+                "variant_condition_rows": len(summaries),
+                "within_variant_planned_contrasts": len(contrasts),
+                "polarity_pooled_sensitivity_rows": len(sensitivity),
+                "neutral_manipulation_check_rows": len(manipulation),
+                "monotonicity_rows": len(monotonicity),
+                "three_way_interaction_rows": len(interaction),
+                "variant_instability_rows": len(instability),
+                "ambiguity_disagreement_rows": len(disagreement),
+                "primary_analysis_uses_initial_outputs_only": True,
                 "revision_interpretation": "secondary stress test only",
             },
             indent=2,
@@ -141,11 +168,12 @@ def build_parser() -> argparse.ArgumentParser:
     run = subparsers.add_parser("run", help="execute model calls; explicitly gated")
     run.add_argument("--config", required=True)
     run.add_argument(
+        "--variant",
         "--case",
         dest="case_ids",
         action="append",
         choices=tuple(CASES),
-        help="case ID to execute; repeat for multiple cases (default: all)",
+        help="variant ID to execute; repeat for multiple variants (default: all)",
     )
     run.add_argument(
         "--conditions",

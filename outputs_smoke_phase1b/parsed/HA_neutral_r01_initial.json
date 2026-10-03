@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "HA-F4",
+      "relevance": "Alex is broadly warm and attentive and also makes occasional one-on-one plans with another friend, supporting general friendliness."
+    },
+    {
+      "fact_id": "HA-F5",
+      "relevance": "Alex has not labeled the outings as dates or initiated explicitly romantic physical contact, leaving no clear romantic signal."
+    },
+    {
+      "fact_id": "HA-F6",
+      "relevance": "Alex suggested trying the following week after postponing dinner but did not choose a day, making the follow-through ambiguous."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HA-F1",
+      "relevance": "Alex initiated two one-on-one outings and accepted another, which could indicate special interest."
+    },
+    {
+      "fact_id": "HA-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and including Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "HA-F3",
+      "relevance": "Repeated extended texting after group events and discussion of future activities suggest sustained interest in continued contact."
+    }
+  ],
+  "most_likely_interpretation": "Genuinely indeterminate",
+  "probabilities": {
+    "A": 30,
+    "B": 28,
+    "Genuinely_indeterminate": 42
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because the personalized attention and one-on-one contact are compatible with both interpretations, direct clarification would resolve the ambiguity more reliably than inference."
+  },
+  "uncertainty_explanation": "The record shows individualized attention and repeated engagement, but Alex's similar warmth toward others and the absence of explicit romantic framing prevent either A or B from being sufficiently better supported."
+}

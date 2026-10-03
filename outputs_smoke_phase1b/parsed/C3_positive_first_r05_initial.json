@@ -1,0 +1,42 @@
+{
+  "confidence": 78,
+  "evidence_against": [
+    {
+      "fact_id": "C3-F4",
+      "relevance": "Slower, shorter replies without follow-up questions are also consistent with relational withdrawal."
+    },
+    {
+      "fact_id": "C3-F5",
+      "relevance": "Canceling two one-on-one meetings without concrete replacement times weakens the evidence of continued relational investment."
+    },
+    {
+      "fact_id": "C3-F6",
+      "relevance": "Attending group gatherings and posting online while delaying replies shows some selective availability, though it does not establish reduced interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C3-F1",
+      "relevance": "Sam identified two substantial, time-limited stressors shortly before the communication change."
+    },
+    {
+      "fact_id": "C3-F2",
+      "relevance": "Sam also withdrew from invitations and a usual hobby, indicating reduced availability beyond interactions with Riley."
+    },
+    {
+      "fact_id": "C3-F3",
+      "relevance": "Sam apologized, explicitly described unusually low bandwidth, and suggested reconnecting after the deadline."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 68,
+    "B": 20,
+    "Genuinely_indeterminate": 12
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "Respect the stated low bandwidth and suggested post-deadline reconnection, then assess whether Sam follows through once the identified stress period passes."
+  },
+  "uncertainty_explanation": "The broader reduction in Sam's activities and the stated stressors favor A, but the sustained decline in responsiveness, canceled meetings, and lack of concrete rescheduling leave meaningful support for B."
+}

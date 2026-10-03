@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 import random
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Sequence
@@ -40,9 +40,9 @@ class ExperimentConfig:
             raise ValueError(f"Config keys differ; missing={sorted(missing)}, extra={sorted(extra)}")
         config = cls(**value)
         if config.replicates != 5:
-            raise ValueError("Approved initial design requires exactly five replicates")
+            raise ValueError("Approved Phase 1B design requires exactly five replicates")
         if config.model != "gpt-5.6-sol":
-            raise ValueError("Approved Phase 1 primary model is gpt-5.6-sol")
+            raise ValueError("Approved Phase 1B primary model is gpt-5.6-sol")
         if config.reasoning_effort != "none":
             raise ValueError('Approved gpt-5.6-sol configuration requires reasoning_effort="none"')
         if config.temperature is not None and not 0 <= config.temperature <= 2:
@@ -97,12 +97,21 @@ def build_manifest(
     )
     rows: list[dict[str, Any]] = []
     for case_id in selected_cases:
+        variant = CASES[case_id]
         for condition_id in selected_conditions:
             for replicate in range(1, selected_replicates + 1):
                 rows.append(
                     {
                         "run_id": f"{case_id}_{condition_id}_r{replicate:02d}",
                         "case_id": case_id,
+                        "variant_id": case_id,
+                        "ambiguity_level": variant.ambiguity_level,
+                        "baseline_polarity": variant.baseline_polarity,
+                        "diagnosticity_scores": list(variant.diagnosticity_scores),
+                        "diagnosticity_net_score": sum(variant.diagnosticity_scores),
+                        "diagnosticity_total_absolute_strength": sum(
+                            abs(score) for score in variant.diagnosticity_scores
+                        ),
                         "condition": condition_id,
                         "order_id": CONDITIONS[condition_id].order_id,
                         "commitment": CONDITIONS[condition_id].commitment,

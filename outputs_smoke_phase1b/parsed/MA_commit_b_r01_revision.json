@@ -1,0 +1,33 @@
+{
+  "_challenge_fact_ids": [
+    "MA-F4",
+    "MA-F5",
+    "MA-F6"
+  ],
+  "challenge_facts_addressed": [
+    {
+      "effect_on_judgment": "Alex's attention and small treats toward several people make the similar behavior toward Jordan less distinctive, although repeated one-on-one plans with Jordan remain somewhat notable.",
+      "fact_id": "MA-F4"
+    },
+    {
+      "effect_on_judgment": "The absence of explicit romantic language, contact, or disclosure substantially limits confidence that Alex's interest is romantic, though Interpretation A also includes potentially romantic interest.",
+      "fact_id": "MA-F5"
+    },
+    {
+      "effect_on_judgment": "Postponing two dinners without proposing a concrete replacement during the following week weakens the case for active pursuit, although the stated reason was scheduling conflicts.",
+      "fact_id": "MA-F6"
+    }
+  ],
+  "reason_for_retaining_or_changing": "The conclusion remains A by a narrow margin. MA-F1 through MA-F3 show repeated one-on-one initiative, individualized attention, and sustained private conversation about future activities. MA-F4 through MA-F6 provide meaningful friendly and non-romantic explanations, so confidence is reduced, but they do not make general friendliness clearly better supported.",
+  "revised_confidence": 57,
+  "revised_most_likely_interpretation": "A",
+  "revised_probabilities": {
+    "A": 47,
+    "B": 34,
+    "Genuinely_indeterminate": 19
+  },
+  "revised_recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because the evidence only narrowly favors special or potentially romantic interest and contains no explicit romantic signal, low-pressure direct clarification is more reliable than further inference."
+  }
+}

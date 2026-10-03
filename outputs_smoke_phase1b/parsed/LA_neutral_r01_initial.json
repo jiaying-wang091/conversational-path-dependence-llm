@@ -1,0 +1,42 @@
+{
+  "confidence": 82,
+  "evidence_against": [
+    {
+      "fact_id": "LA-F5",
+      "relevance": "Alex has not explicitly identified the interest or interactions as romantic and has not initiated explicitly romantic physical contact."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LA-F1",
+      "relevance": "Repeated one-on-one invitations, including evening dinners and advance proposals for another meeting, support sustained special interest."
+    },
+    {
+      "fact_id": "LA-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing only Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "LA-F3",
+      "relevance": "Lengthy private conversations after group events, personal topics, and suggestions for future shared activities indicate focused engagement."
+    },
+    {
+      "fact_id": "LA-F4",
+      "relevance": "Alex has not shown comparable one-on-one planning or individualized gestures toward other group members, making general friendliness a less complete explanation."
+    },
+    {
+      "fact_id": "LA-F6",
+      "relevance": "Immediately offering a specific replacement date after postponing indicates continued priority and follow-through."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 76,
+    "B": 15,
+    "Genuinely_indeterminate": 9
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern supports special or potentially romantic interest, but direct clarification is the clearest way to resolve the remaining ambiguity."
+  },
+  "uncertainty_explanation": "The behavior is consistently individualized and sustained, so A is better supported than general friendliness. However, the absence of explicit romantic language, date labeling, or romantic physical contact means the interest could still be especially close but non-romantic."
+}

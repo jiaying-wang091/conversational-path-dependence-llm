@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex behaves warmly toward several people and also makes one-on-one plans with other friends, weakening the inference that this behavior is special or romantic."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "There has been no explicit romantic framing, contact, or statement of interest."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Postponing dinner twice without proposing a replacement date weakens the case for active special or romantic pursuit."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Two initiated one-on-one plans could indicate special interest, but are also consistent with friendship."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing preferred tea show personal attentiveness."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeated extended conversations after group events suggest sustained interest in Jordan specifically."
+    }
+  ],
+  "most_likely_interpretation": "Genuinely indeterminate",
+  "probabilities": {
+    "A": 30,
+    "B": 34,
+    "Genuinely_indeterminate": 36
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because the record contains meaningful signs in both directions, a direct, low-pressure clarification would be more reliable than inferring intent from ambiguous behavior."
+  },
+  "uncertainty_explanation": "Alex's personal attention and repeated one-on-one engagement support A, while Alex's generally warm behavior, lack of explicit romantic signals, and failure to reschedule support B. Neither interpretation is sufficiently better supported on these facts."
+}

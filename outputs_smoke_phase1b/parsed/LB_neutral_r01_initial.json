@@ -1,0 +1,42 @@
+{
+  "confidence": 88,
+  "evidence_against": [
+    {
+      "fact_id": "LB-F1",
+      "relevance": "Alex did initiate two one-on-one interactions, which could indicate some individualized interest, although both had immediate class or project context."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LB-F4",
+      "relevance": "Alex shows similar friendly behavior toward several group members and makes one-on-one plans with at least four other friends."
+    },
+    {
+      "fact_id": "LB-F5",
+      "relevance": "Inviting Jordan to a singles event and offering an introduction to someone else weighs against clear romantic interest from Alex."
+    },
+    {
+      "fact_id": "LB-F6",
+      "relevance": "Alex declined Jordan's proposed one-on-one dinner and substituted a group dinner."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "The good-luck message followed a group-calendar entry, while the tea was for the whole group."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "Their messages were mostly about class logistics and group-discussion topics."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 5,
+    "B": 82,
+    "Genuinely_indeterminate": 13
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "Treat Alex's behavior as friendly unless clearer evidence of special interest emerges."
+  },
+  "uncertainty_explanation": "Alex's two one-on-one invitations leave some possibility of special interest, but the broader pattern—similar behavior toward others, group-oriented gestures, an offered introduction to another person, and redirecting dinner to a group setting—supports general friendliness more strongly."
+}

@@ -1,0 +1,54 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "HB-F3",
+      "relevance": "Repeated extended texting after group events, including personal updates, could indicate particular interest in Jordan."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Alex initiated one one-on-one outing, which provides some support for special interest."
+    },
+    {
+      "fact_id": "HB-F2",
+      "relevance": "Remembering Jordan's presentation and preferred tea shows attentiveness, although the surrounding circumstances weaken its specificity."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex also did not explicitly describe the relationship as platonic, leaving the nature of the interest unresolved."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HB-F4",
+      "relevance": "Alex behaves warmly toward several group members and has also made one-on-one plans with other friends, making the attention to Jordan less clearly special."
+    },
+    {
+      "fact_id": "HB-F1",
+      "relevance": "Only one of the two one-on-one outings was suggested by Alex, which is compatible with ordinary friendship."
+    },
+    {
+      "fact_id": "HB-F2",
+      "relevance": "The encouragement followed a group reminder, and Jordan's preferred tea was one of several drink options, so these gestures do not clearly indicate special interest."
+    },
+    {
+      "fact_id": "HB-F5",
+      "relevance": "Alex did not label the outings as dates or initiate explicitly romantic physical contact during the ten weeks."
+    },
+    {
+      "fact_id": "HB-F6",
+      "relevance": "After postponing Jordan's dinner proposal, Alex did not identify a specific alternative week or date."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 20,
+    "B": 60,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record is more consistent with general friendliness than clear romantic interest, but continued ordinary engagement leaves room for clearer evidence to emerge."
+  },
+  "uncertainty_explanation": "The one-on-one coffee, attentiveness, and extended texting could reflect special interest, but Alex's similar warmth and one-on-one plans with others substantially reduce their diagnostic value. The absence of explicit romantic behavior and a concrete rescheduling effort favors B without ruling out A."
+}

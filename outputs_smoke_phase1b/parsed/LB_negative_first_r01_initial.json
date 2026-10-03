@@ -1,0 +1,54 @@
+{
+  "confidence": 88,
+  "evidence_against": [
+    {
+      "fact_id": "LB-F1",
+      "relevance": "Alex did initiate two one-on-one interactions, which provides limited support for possible special interest."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "Remembering the presentation and sending Jordan a good-luck message shows individualized attention, though the context limits its weight."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "The post-event message exchanges show some sustained direct engagement, although their content was mostly group-related."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "LB-F4",
+      "relevance": "Alex shows similar attention and makes one-on-one plans with several other friends, supporting general friendliness."
+    },
+    {
+      "fact_id": "LB-F5",
+      "relevance": "Inviting Jordan to a singles event and offering an introduction to someone else weighs against clear special or romantic interest."
+    },
+    {
+      "fact_id": "LB-F6",
+      "relevance": "Alex declined Jordan's proposed one-on-one dinner and substituted a group dinner."
+    },
+    {
+      "fact_id": "LB-F1",
+      "relevance": "The two initiated one-on-one interactions were limited and tied to shared class or group-project contexts."
+    },
+    {
+      "fact_id": "LB-F2",
+      "relevance": "The message followed a group-calendar reminder, while the tea was for the whole group rather than specifically for Jordan."
+    },
+    {
+      "fact_id": "LB-F3",
+      "relevance": "The messages mainly concerned class logistics and group-discussion topics."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 7,
+    "B": 85,
+    "Genuinely_indeterminate": 8
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record is better explained by general friendliness, so maintaining the current level of engagement is more proportionate than assuming special interest."
+  },
+  "uncertainty_explanation": "Some individualized contact exists, but it is limited, largely connected to shared activities, and outweighed by Alex's similar behavior toward others, the offered introduction, and the declined one-on-one dinner."
+}

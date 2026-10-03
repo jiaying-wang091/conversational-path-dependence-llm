@@ -1,0 +1,42 @@
+{
+  "confidence": 76,
+  "evidence_against": [
+    {
+      "fact_id": "C3-F4",
+      "relevance": "Slower, shorter replies without follow-up questions are also consistent with reduced relational interest."
+    },
+    {
+      "fact_id": "C3-F5",
+      "relevance": "Canceling two one-on-one meetings without concrete replacement times weakens the situational-stress interpretation."
+    },
+    {
+      "fact_id": "C3-F6",
+      "relevance": "Attending group gatherings and posting online while delaying replies shows some selective availability, though these activities may require less bandwidth than direct interaction."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C3-F1",
+      "relevance": "The communication change closely followed disclosure of a major work deadline and a parent's medical procedure."
+    },
+    {
+      "fact_id": "C3-F2",
+      "relevance": "Sam also withdrew from other invitations and a normally attended hobby, indicating reduced availability was not limited to Riley."
+    },
+    {
+      "fact_id": "C3-F3",
+      "relevance": "Sam apologized, described unusually low bandwidth, and linked possible reconnection to the end of the work deadline."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 65,
+    "B": 22,
+    "Genuinely_indeterminate": 13
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "Respect the low-bandwidth period Sam identified and reassess after the stated work deadline; if the pattern continues, clarify directly."
+  },
+  "uncertainty_explanation": "The broader reduction in Sam's activities and the stated stressors favor A, but the sustained decline in responsiveness to Riley, canceled meetings, and lack of concrete rescheduling leave meaningful support for B."
+}

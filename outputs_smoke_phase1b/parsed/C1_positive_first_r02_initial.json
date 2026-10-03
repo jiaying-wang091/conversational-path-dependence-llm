@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one outings, including a Saturday museum visit, which could indicate special interest."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeatedly continuing private conversations with Jordan for thirty to sixty minutes suggests sustained interest in Jordan's company."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex shows similar warmth, gives treats, and makes one-on-one plans with other people, so much of the behavior is consistent with general friendliness."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "Across ten weeks, Alex did not label either outing a date, initiate explicitly romantic physical contact, or state romantic interest."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not suggest a replacement date during the next two weeks, which weakens the case for active special or romantic pursuit."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 58,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The record supports friendliness more than romantic interest, but the individualized attention leaves some ambiguity. Further behavior, especially whether Alex initiates or reschedules one-on-one time, may clarify the pattern."
+  },
+  "uncertainty_explanation": "Alex's one-on-one invitations, personalized gestures, and extended conversations could reflect special interest, but Alex behaves warmly toward others and has provided no explicit romantic signal. The postponed dinner without a replacement date further favors general friendliness, though the stated scheduling conflicts prevent a definitive inference."
+}

@@ -1,0 +1,7 @@
+ambiguity_level,baseline_polarity,distinct_initial_categories,initial_confidence_range,initial_d_range,pairwise_conclusion_disagreement_rate,recommendation_disagreement_rate,selective_omission_range,unique_initial_behavior_patterns_across_cells,variant_id
+high,A,2,14,0.32999999999999996,0.4,0.4,0.0,5,HA
+high,B,1,8,0.10999999999999999,0.0,0.6,0.0,5,HB
+low,A,1,0,0.020000000000000018,0.0,0.0,0.0,5,LA
+low,B,1,0,0.06999999999999995,0.0,0.0,0.0,5,LB
+medium,A,1,2,0.07999999999999999,0.0,0.0,0.0,5,MA
+medium,B,1,6,0.10999999999999999,0.0,0.0,0.0,5,MB

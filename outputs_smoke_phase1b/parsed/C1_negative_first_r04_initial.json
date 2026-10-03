@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one outings with Jordan, which could indicate special interest."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeatedly continuing private conversations with Jordan for thirty to sixty minutes suggests sustained individual interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex shows similar warmth, gives treats, and makes one-on-one plans with other friends, so the behavior toward Jordan is not clearly special."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "Across ten weeks, Alex gave no explicit romantic label, contact, or statement of interest."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date during the next two weeks, weakening the case for active pursuit."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 58,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The record supports friendliness more than romance, but the personalized attention leaves some ambiguity; further behavior may clarify whether Alex consistently prioritizes one-on-one contact."
+  },
+  "uncertainty_explanation": "Alex's individualized attention and repeated one-on-one interaction could reflect special interest, but Alex's comparable behavior with others, lack of explicit romantic signals, and failure to reschedule the dinner make general friendliness the better-supported interpretation."
+}

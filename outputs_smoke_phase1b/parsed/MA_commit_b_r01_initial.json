@@ -1,0 +1,42 @@
+{
+  "confidence": 62,
+  "evidence_against": [
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex also checks in on and brings treats for others, so some attentive behavior reflects general friendliness; Alex has also made one-on-one plans with another friend."
+    },
+    {
+      "fact_id": "MA-F5",
+      "relevance": "There has been no explicit romantic labeling, romantic physical contact, or direct statement of romantic interest."
+    },
+    {
+      "fact_id": "MA-F6",
+      "relevance": "Postponing two dinners without offering a concrete replacement date the following week weakens the inference of strong or active romantic pursuit."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MA-F1",
+      "relevance": "Alex initiated three varied one-on-one plans with Jordan, including an evening dinner."
+    },
+    {
+      "fact_id": "MA-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "MA-F3",
+      "relevance": "Repeated extended private conversations about personal updates and possible shared activities support special interest."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 52,
+    "B": 30,
+    "Genuinely_indeterminate": 18
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern modestly favors special or potentially romantic interest, but the lack of explicit signals and the postponed dinners make a low-pressure direct clarification more reliable than inference."
+  },
+  "uncertainty_explanation": "Alex's repeated one-on-one initiatives and sustained individualized attention distinguish Jordan to some extent, but Alex is generally attentive to others, has another one-on-one friendship, has given no explicit romantic signal, and did not promptly reschedule two dinners."
+}

@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "HA-F4",
+      "relevance": "Alex is broadly warm and attentive and also makes occasional one-on-one plans with another friend, supporting general friendliness."
+    },
+    {
+      "fact_id": "HA-F5",
+      "relevance": "Alex has not framed the outings as dates or initiated explicitly romantic physical contact, leaving romantic intent unclear."
+    },
+    {
+      "fact_id": "HA-F6",
+      "relevance": "Alex suggested the following week after postponing but did not choose a day, providing only mixed evidence of eagerness."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "HA-F1",
+      "relevance": "Alex initiated two one-on-one outings and accepted another, which could indicate special interest."
+    },
+    {
+      "fact_id": "HA-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and including Jordan's preferred tea show personal attentiveness."
+    },
+    {
+      "fact_id": "HA-F3",
+      "relevance": "Repeated extended conversations after group events and discussion of future activities suggest sustained interest in connecting."
+    }
+  ],
+  "most_likely_interpretation": "Genuinely indeterminate",
+  "probabilities": {
+    "A": 34,
+    "B": 31,
+    "Genuinely_indeterminate": 35
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because the same behavior plausibly reflects either special interest or general friendliness, direct clarification would resolve the ambiguity more reliably than inference."
+  },
+  "uncertainty_explanation": "The one-on-one initiative, attentiveness, and sustained texting support A, but Alex's similar warmth toward others and the absence of explicit romantic framing prevent A from being sufficiently better supported than B."
+}

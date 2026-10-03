@@ -1,0 +1,46 @@
+{
+  "confidence": 62,
+  "evidence_against": [
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex regularly checks in on several group members and brings others treats, so some attentive behavior reflects general friendliness."
+    },
+    {
+      "fact_id": "MA-F5",
+      "relevance": "There has been no explicit romantic labeling, contact, or statement of interest."
+    },
+    {
+      "fact_id": "MA-F6",
+      "relevance": "Postponing two dinners without offering a concrete replacement date weakens the inference of strong special or romantic interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MA-F1",
+      "relevance": "Three initiated one-on-one plans, including an evening dinner, support special or potentially romantic interest."
+    },
+    {
+      "fact_id": "MA-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show individualized attention."
+    },
+    {
+      "fact_id": "MA-F3",
+      "relevance": "Repeated extended personal conversations and discussion of future activities together support sustained interest."
+    },
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex makes one-on-one plans with relatively few people, making the attention to Jordan somewhat distinctive."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 52,
+    "B": 28,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern modestly favors A but remains ambiguous; a low-pressure direct clarification would distinguish special interest from general friendliness."
+  },
+  "uncertainty_explanation": "Alex's repeated one-on-one initiatives and individualized attention favor A, but Alex also behaves warmly toward others, has made plans with another friend, has given no explicit romantic signal, and did not promptly reschedule two dinners."
+}

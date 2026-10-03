@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex behaves warmly toward several group members and also makes one-on-one plans with other friends, reducing the distinctiveness of the behavior toward Jordan."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "There has been no explicit romantic framing, romantic physical contact, or statement of romantic interest."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date within the next two weeks, which weakens the case for active special interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one plans, which could indicate special interest."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeated extended texting after group events suggests sustained interest in interacting with Jordan individually."
+    }
+  ],
+  "most_likely_interpretation": "Genuinely indeterminate",
+  "probabilities": {
+    "A": 30,
+    "B": 35,
+    "Genuinely_indeterminate": 35
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Because the personalized attention and the broader pattern of friendliness support competing interpretations, direct clarification would resolve the ambiguity more reliably than inference."
+  },
+  "uncertainty_explanation": "Facts C1-F1 through C1-F3 support possible special interest, but C1-F4 shows similar friendliness toward others, while C1-F5 and C1-F6 provide no clear romantic confirmation and some counterevidence. Neither interpretation is sufficiently better supported."
+}

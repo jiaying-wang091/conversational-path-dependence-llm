@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one outings with Jordan, which could indicate special interest."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeatedly continuing private conversations for thirty to sixty minutes after group events suggests sustained interest in Jordan's company."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex shows similar warmth, gift-giving, check-ins, and one-on-one planning with other people, making general friendliness the stronger explanation."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "Across ten weeks, Alex did not label either outing a date, state romantic interest, or initiate explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date during the next two weeks, which weakens the case for active special or romantic pursuit."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 58,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record supports friendliness more than clear romantic interest, so maintaining the current level of engagement is proportionate unless clearer evidence emerges."
+  },
+  "uncertainty_explanation": "Alex's repeated one-on-one contact and personalized attention leave a meaningful possibility of special interest, but Alex's similar behavior toward others, lack of explicit romantic signals, and failure to reschedule the dinner make general friendliness the better-supported interpretation."
+}

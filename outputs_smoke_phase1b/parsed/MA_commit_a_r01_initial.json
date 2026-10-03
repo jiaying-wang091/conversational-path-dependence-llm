@@ -1,0 +1,46 @@
+{
+  "confidence": 64,
+  "evidence_against": [
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex regularly checks on several group members, gives others treats, and has made one-on-one plans with another friend, so some behavior fits general friendliness."
+    },
+    {
+      "fact_id": "MA-F5",
+      "relevance": "There has been no explicit romantic labeling, direct statement of interest, or explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "MA-F6",
+      "relevance": "Postponing two dinners without offering a concrete replacement date the following week weakens the inference of strong or active special interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MA-F1",
+      "relevance": "Three initiated one-on-one plans, including an evening dinner, suggest focused interest in spending time with Jordan."
+    },
+    {
+      "fact_id": "MA-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "MA-F3",
+      "relevance": "Repeated extended texting after group events about personal updates and possible shared activities indicates sustained individual engagement."
+    },
+    {
+      "fact_id": "MA-F4",
+      "relevance": "Alex's one-on-one planning appears relatively selective, although it is not unique to Jordan."
+    }
+  ],
+  "most_likely_interpretation": "A",
+  "probabilities": {
+    "A": 55,
+    "B": 27,
+    "Genuinely_indeterminate": 18
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "The pattern leans toward special or potentially romantic interest, but the absence of explicit signals and the postponed dinners make a low-pressure direct clarification more reliable than further inference."
+  },
+  "uncertainty_explanation": "Alex's selective one-on-one invitations, personalized attention, and sustained private conversations support A, while Alex's broader friendliness, lack of explicit romantic behavior, and failure to promptly reschedule dinners leave substantial room for B."
+}

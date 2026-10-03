@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey initiated contact most weeks and consistently arranged approximately weekly one-on-one time, indicating sustained interest."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey invested time in Drew's important interview preparation and attended a birthday dinner Drew considered important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, showing continuity of interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting the question, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey canceled two advance plans for other commitments."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 22,
+    "B": 63,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could ask Casey what level of involvement Casey is willing to offer and whether the reluctance to define or plan ahead is likely to change, then set expectations accordingly."
+  },
+  "uncertainty_explanation": "Casey's regular initiation, weekly contact, practical support, and resumption of contact show meaningful interest. However, repeated avoidance of definition, limited advance planning, convenience-weighted meetings, cancellations, and lack of social integration more strongly support involvement without meaningful commitment."
+}

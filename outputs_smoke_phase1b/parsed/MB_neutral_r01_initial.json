@@ -1,0 +1,42 @@
+{
+  "confidence": 78,
+  "evidence_against": [
+    {
+      "fact_id": "MB-F1",
+      "relevance": "Alex initiated two one-on-one outings, which could indicate special interest."
+    },
+    {
+      "fact_id": "MB-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing drink options show personal attentiveness."
+    },
+    {
+      "fact_id": "MB-F3",
+      "relevance": "Extended post-event texting that included personal updates could reflect interest beyond routine group interaction."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MB-F4",
+      "relevance": "Alex shows similar attentiveness and one-on-one engagement toward several other friends, supporting general friendliness."
+    },
+    {
+      "fact_id": "MB-F5",
+      "relevance": "Across ten weeks, Alex gave no explicit romantic label, statement, or physical signal."
+    },
+    {
+      "fact_id": "MB-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date within the next two weeks."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 15,
+    "B": 65,
+    "Genuinely_indeterminate": 20
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record better supports friendliness than special or romantic interest, so escalation is not warranted without clearer evidence."
+  },
+  "uncertainty_explanation": "Alex's one-on-one invitations, attentiveness, and extended texting leave some possibility of special interest, but similar behavior toward others, the absence of explicit romantic signals, and the unrescheduled dinner make general friendliness the better-supported interpretation."
+}

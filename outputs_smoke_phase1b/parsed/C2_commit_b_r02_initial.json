@@ -1,0 +1,42 @@
+{
+  "confidence": 78,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey consistently initiated contact and arranged approximately weekly one-on-one time over twelve weeks."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey invested time in helping Drew with an important interview and attended a birthday dinner Drew identified as important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods of geographic separation."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting the issue, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey canceled advance plans when other commitments arose."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 17,
+    "B": 68,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could ask directly whether Casey expects the involvement to remain undefined and short-term or is willing to discuss a clearer direction and timeframe."
+  },
+  "uncertainty_explanation": "Casey's sustained initiation, practical support, and resumed contact show genuine interest and effort, but the repeated avoidance of definition, limited advance planning, convenience-centered meetings, cancellations, and lack of social integration more strongly support low-commitment involvement than meaningful commitment."
+}

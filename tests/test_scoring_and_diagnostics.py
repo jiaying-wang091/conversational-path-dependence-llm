@@ -13,11 +13,11 @@ def initial_fixture() -> dict:
         "confidence": 65,
         "probabilities": {"A": 60, "B": 30, "Genuinely_indeterminate": 10},
         "evidence_supporting": [
-            {"fact_id": "C1-F1", "relevance": "supports A"},
-            {"fact_id": "C1-F2", "relevance": "supports A"},
+            {"fact_id": "LA-F1", "relevance": "supports A"},
+            {"fact_id": "LA-F2", "relevance": "supports A"},
         ],
         "evidence_against": [
-            {"fact_id": "C1-F4", "relevance": "supports B"},
+            {"fact_id": "LA-F4", "relevance": "supports B"},
         ],
         "recommended_action": {
             "category": "clarify directly",
@@ -33,37 +33,40 @@ def revision_fixture() -> dict:
         "revised_confidence": 55,
         "revised_probabilities": {"A": 40, "B": 40, "Genuinely_indeterminate": 20},
         "challenge_facts_addressed": [
-            {"fact_id": "C1-F4", "effect_on_judgment": "reduces A"},
-            {"fact_id": "C1-F5", "effect_on_judgment": "reduces A"},
-            {"fact_id": "C1-F6", "effect_on_judgment": "reduces A"},
+            {"fact_id": "LA-F4", "effect_on_judgment": "reduces A"},
+            {"fact_id": "LA-F5", "effect_on_judgment": "reduces A"},
+            {"fact_id": "LA-F6", "effect_on_judgment": "reduces A"},
         ],
         "reason_for_retaining_or_changing": "The opposing evidence warrants uncertainty.",
         "revised_recommended_action": {
             "category": "observe and wait",
             "explanation": "Avoid overinterpreting.",
         },
-        "_challenge_fact_ids": ["C1-F4", "C1-F5", "C1-F6"],
+        "_challenge_fact_ids": ["LA-F4", "LA-F5", "LA-F6"],
     }
 
 
 class ScoringTests(unittest.TestCase):
     def setUp(self) -> None:
         self.run = {
-            "run_id": "C1_neutral_r01",
-            "case_id": "C1",
+            "run_id": "LA_neutral_r01",
+            "case_id": "LA",
+            "variant_id": "LA",
+            "ambiguity_level": "low",
+            "baseline_polarity": "A",
             "condition": "neutral",
             "replicate": 1,
             "temperature": 0,
         }
 
     def test_schema_and_scoring(self) -> None:
-        initial = validate_initial(initial_fixture(), {f"C1-F{i}" for i in range(1, 7)})
+        initial = validate_initial(initial_fixture(), {f"LA-F{i}" for i in range(1, 7)})
         revision_raw = revision_fixture()
         revision_for_validation = {key: value for key, value in revision_raw.items() if not key.startswith("_")}
         revision = validate_revision(
             revision_for_validation,
-            {f"C1-F{i}" for i in range(1, 7)},
-            {"C1-F4", "C1-F5", "C1-F6"},
+            {f"LA-F{i}" for i in range(1, 7)},
+            {"LA-F4", "LA-F5", "LA-F6"},
         )
         revision["_challenge_fact_ids"] = revision_raw["_challenge_fact_ids"]
         coded = code_run(
@@ -82,7 +85,7 @@ class ScoringTests(unittest.TestCase):
         initial = initial_fixture()
         revision = revision_fixture()
         row1 = code_run(self.run, initial, revision)
-        run2 = {**self.run, "run_id": "C1_neutral_r02", "replicate": 2}
+        run2 = {**self.run, "run_id": "LA_neutral_r02", "replicate": 2}
         revision2 = revision_fixture()
         revision2["revised_confidence"] = 56
         row2 = code_run(run2, initial, revision2)
@@ -101,4 +104,3 @@ class ScoringTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

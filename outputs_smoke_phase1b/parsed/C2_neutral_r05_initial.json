@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey regularly initiated contact and arranged approximately weekly one-on-one time over twelve weeks, indicating sustained interest."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey provided practical support for an important interview and attended a birthday dinner Drew identified as important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods apart, showing continued initiative."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting it, supporting a low-commitment interpretation."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Meetings were usually convenient for Casey or arranged at short notice, and Casey twice displaced advance plans for other commitments."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning two months ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 25,
+    "B": 60,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could ask what level of involvement Casey is currently willing to offer and decide whether that matches Drew's needs, given the combination of consistent contact and repeated avoidance of definition or longer-term planning."
+  },
+  "uncertainty_explanation": "The record shows genuine consistency, initiative, and support, but the repeated reluctance to define the relationship, plan ahead, prioritize advance plans, or integrate Drew into Casey's close circles makes B better supported overall. The facts do not establish Casey's motives or rule out meaningful interest."
+}

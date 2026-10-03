@@ -1,0 +1,4 @@
+a_direction_matches_ex_ante,a_variant,ambiguity_level,b_direction_matches_ex_ante,b_variant,mean_neutral_absolute_d,neutral_mean_d_a,neutral_mean_d_b,polarity_symmetry_residual_d_a_plus_d_b
+True,LA,low,True,LB,0.682,0.5680000000000001,-0.796,-0.22799999999999998
+True,MA,medium,True,MB,0.37,0.24,-0.5,-0.26
+False,HA,high,True,HB,0.187,0.0,-0.374,-0.374

@@ -1,0 +1,4 @@
+ambiguity_level,mean_distinct_initial_categories,mean_initial_confidence_range,mean_initial_d_range,mean_pairwise_conclusion_disagreement_rate,mean_recommendation_disagreement_rate,variant_count
+low,1,3.5,0.08999999999999997,0.0,0.0,2
+medium,1,4,0.105,0.0,0.0,2
+high,1.5,11,0.25,0.13186813186813187,0.4386716224951519,2

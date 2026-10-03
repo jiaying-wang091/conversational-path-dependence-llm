@@ -1,0 +1,42 @@
+{
+  "confidence": 72,
+  "evidence_against": [
+    {
+      "fact_id": "C1-F4",
+      "relevance": "Alex behaves warmly toward several group members and makes one-on-one plans with other friends, reducing the distinctiveness of the behavior toward Jordan."
+    },
+    {
+      "fact_id": "C1-F5",
+      "relevance": "There has been no explicit romantic framing, romantic physical contact, or statement of romantic interest."
+    },
+    {
+      "fact_id": "C1-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date within the following two weeks, weakening the case for active special interest."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C1-F1",
+      "relevance": "Alex initiated two one-on-one plans, which could indicate special interest but can also fit friendship."
+    },
+    {
+      "fact_id": "C1-F2",
+      "relevance": "Remembering the presentation, sending encouragement, and bringing Jordan's preferred tea show personalized attention."
+    },
+    {
+      "fact_id": "C1-F3",
+      "relevance": "Repeated extended one-on-one texting after group events suggests sustained interest in interacting with Jordan."
+    }
+  ],
+  "most_likely_interpretation": "Genuinely indeterminate",
+  "probabilities": {
+    "A": 30,
+    "B": 34,
+    "Genuinely_indeterminate": 36
+  },
+  "recommended_action": {
+    "category": "observe and wait",
+    "explanation": "The personalized attention and one-on-one contact are meaningful but remain compatible with Alex's broader friendliness; observing whether Alex follows up or distinguishes Jordan more clearly would provide better evidence."
+  },
+  "uncertainty_explanation": "Facts C1-F1 through C1-F3 support possible special interest, while C1-F4 through C1-F6 provide substantial friendship-consistent and non-escalatory evidence. Neither interpretation is sufficiently better supported on this record."
+}

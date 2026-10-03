@@ -1,0 +1,42 @@
+{
+  "confidence": 82,
+  "evidence_against": [
+    {
+      "fact_id": "MB-F1",
+      "relevance": "Alex initiated two one-on-one plans with Jordan, which could indicate special interest, though the museum visit concerned a group-shared interest."
+    },
+    {
+      "fact_id": "MB-F2",
+      "relevance": "Remembering Jordan's presentation, sending encouragement, and bringing several drink options show attentiveness that could be consistent with special interest."
+    },
+    {
+      "fact_id": "MB-F3",
+      "relevance": "Extended private texting that included personal updates could support greater-than-general interest, although it also included group topics."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "MB-F4",
+      "relevance": "Alex shows similar care and one-on-one engagement toward several other friends, making the behavior toward Jordan less clearly special."
+    },
+    {
+      "fact_id": "MB-F5",
+      "relevance": "Across ten weeks, Alex did not label either outing a date, express romantic interest, or initiate explicitly romantic physical contact."
+    },
+    {
+      "fact_id": "MB-F6",
+      "relevance": "Alex postponed Jordan's proposed dinner twice and did not offer a replacement date during the next two weeks."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 12,
+    "B": 73,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "continue current level of engagement",
+    "explanation": "The record better supports general friendliness than clear special or romantic interest, so maintaining the current level of engagement is proportionate."
+  },
+  "uncertainty_explanation": "The one-on-one plans, attentiveness, and extended texting leave some possibility of special interest, but Alex's similar behavior with others, lack of explicit romantic signals, and failure to reschedule the proposed dinner make general friendliness the better-supported interpretation."
+}

@@ -1,0 +1,42 @@
+{
+  "confidence": 68,
+  "evidence_against": [
+    {
+      "fact_id": "C2-F1",
+      "relevance": "Casey regularly initiated contact and arranged approximately weekly one-on-one time over twelve weeks."
+    },
+    {
+      "fact_id": "C2-F2",
+      "relevance": "Casey provided practical support for an important interview and attended a birthday dinner Drew identified as important."
+    },
+    {
+      "fact_id": "C2-F3",
+      "relevance": "Casey independently resumed regular contact after two periods in different cities."
+    }
+  ],
+  "evidence_supporting": [
+    {
+      "fact_id": "C2-F4",
+      "relevance": "Casey twice declined to define the relationship and offered no timeline for revisiting it."
+    },
+    {
+      "fact_id": "C2-F5",
+      "relevance": "Short-notice, geographically convenient meetings and two cancellations for other commitments support a convenience-based pattern."
+    },
+    {
+      "fact_id": "C2-F6",
+      "relevance": "Casey has not integrated Drew into close social or family circles and declined a future event because it required planning ahead."
+    }
+  ],
+  "most_likely_interpretation": "B",
+  "probabilities": {
+    "A": 25,
+    "B": 60,
+    "Genuinely_indeterminate": 15
+  },
+  "recommended_action": {
+    "category": "clarify directly",
+    "explanation": "Drew could ask what level of involvement Casey is currently willing to offer and decide whether that matches Drew's needs, without assuming a future change."
+  },
+  "uncertainty_explanation": "The record shows sustained initiative, support, and reconnection, but the repeated avoidance of definition, limited advance planning, convenience pattern, and lack of social integration make B better supported overall."
+}

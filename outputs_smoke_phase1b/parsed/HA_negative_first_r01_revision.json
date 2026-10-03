@@ -1,0 +1,33 @@
+{
+  "_challenge_fact_ids": [
+    "HA-F1",
+    "HA-F2",
+    "HA-F3"
+  ],
+  "challenge_facts_addressed": [
+    {
+      "effect_on_judgment": "Alex's repeated initiation of one-on-one outings over ten weeks provides meaningful evidence of interest specifically in spending time with Jordan.",
+      "fact_id": "HA-F1"
+    },
+    {
+      "effect_on_judgment": "Remembering the presentation, sending timely encouragement, and including Jordan's preferred tea show individualized attention, although bringing several drink options makes the tea less decisive.",
+      "fact_id": "HA-F2"
+    },
+    {
+      "effect_on_judgment": "Three extended post-event conversations involving personal updates and future activities show a recurring pattern of sustained engagement beyond the group events.",
+      "fact_id": "HA-F3"
+    }
+  ],
+  "reason_for_retaining_or_changing": "The conclusion changes narrowly to A because HA-F1 through HA-F3 together form a repeated pattern of individualized attention, one-on-one initiative, and sustained communication. HA-F4 still makes general friendliness plausible, while HA-F5 and HA-F6 limit confidence because there is no explicit romantic signal and the proposed dinner was not concretely rescheduled.",
+  "revised_confidence": 58,
+  "revised_most_likely_interpretation": "A",
+  "revised_probabilities": {
+    "A": 45,
+    "B": 25,
+    "Genuinely_indeterminate": 30
+  },
+  "revised_recommended_action": {
+    "category": "clarify directly",
+    "explanation": "A low-pressure direct clarification is appropriate because special or potentially romantic interest is somewhat better supported, but the evidence remains ambiguous."
+  }
+}
