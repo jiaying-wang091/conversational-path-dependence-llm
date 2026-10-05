@@ -1,11 +1,11 @@
-"""Exact and behavioral duplicate-output diagnostics."""
+"""Initial, per-turn, and full-trajectory duplicate diagnostics."""
 
 from __future__ import annotations
 
 import itertools
 import json
 from collections import defaultdict
-from typing import Any, Callable
+from typing import Any
 
 
 def canonical_json(value: Any) -> str:
@@ -16,71 +16,68 @@ def _model_output_only(value: dict) -> dict:
     return {key: item for key, item in value.items() if not key.startswith("_")}
 
 
-def initial_behavioral_signature(row: dict) -> tuple:
+def turn_behavioral_signature(row: dict) -> tuple:
     return (
-        row["initial_category"],
-        row["initial_confidence"],
-        row["initial_p_a"],
-        row["initial_p_b"],
-        row["initial_p_i"],
-        tuple(row["supporting_fact_ids"]),
-        tuple(row["against_fact_ids"]),
-        tuple(row["omitted_fact_ids"]),
-        row["initial_recommendation_category"],
+        row["conclusion_category"],
+        row["confidence"],
+        row["p_a"],
+        row["p_b"],
+        row["p_indeterminate"],
+        tuple(row["original_fact_ids_cited"]),
+        tuple(row["new_fact_ids_cited"]),
+        row["recommendation_category"],
+        row["recommendation_intensity"],
     )
 
 
-def full_behavioral_signature(row: dict) -> tuple:
-    return initial_behavioral_signature(row) + (
-        row["revised_category"],
-        row["revised_confidence"],
-        row["revised_p_a"],
-        row["revised_p_b"],
-        row["revised_p_i"],
-        tuple(row["challenge_fact_ids"]),
-        tuple(row["challenge_facts_addressed"]),
-        row["revised_recommendation_category"],
-        row["category_changed"],
-        row["recommendation_changed"],
-    )
-
-
-def _duplicate_rate(values: list[Any], key: Callable[[Any], Any] = lambda value: value) -> float | None:
+def _duplicate_rate(values: list[Any]) -> float | None:
     pairs = list(itertools.combinations(values, 2))
     if not pairs:
         return None
-    return sum(key(left) == key(right) for left, right in pairs) / len(pairs)
+    return sum(left == right for left, right in pairs) / len(pairs)
 
 
 def duplicate_diagnostics(
-    coded_rows: list[dict], parsed_by_run: dict[str, tuple[dict, dict]]
-) -> list[dict]:
-    groups: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    coded_rows: list[dict], parsed_by_run: dict[str, dict[int, dict]]
+) -> tuple[list[dict], list[dict]]:
+    trajectories: dict[str, list[dict]] = defaultdict(list)
     for row in coded_rows:
-        groups[(row["case_id"], row["condition"])].append(row)
+        trajectories[row["run_id"]].append(row)
+    for rows in trajectories.values():
+        rows.sort(key=lambda item: item["turn"])
 
-    diagnostics: list[dict] = []
-    for (case_id, condition), rows in sorted(groups.items()):
-        rows.sort(key=lambda row: row["replicate"])
+    by_condition: dict[str, list[str]] = defaultdict(list)
+    for run_id, rows in trajectories.items():
+        by_condition[rows[0]["condition"]].append(run_id)
+
+    condition_rows: list[dict] = []
+    turn_rows: list[dict] = []
+    for condition, run_ids in sorted(by_condition.items()):
+        run_ids.sort()
         initial_exact = [
-            canonical_json(_model_output_only(parsed_by_run[row["run_id"]][0])) for row in rows
+            canonical_json(_model_output_only(parsed_by_run[run_id][0]))
+            for run_id in run_ids
         ]
         full_exact = [
             canonical_json(
                 {
-                    "initial": _model_output_only(parsed_by_run[row["run_id"]][0]),
-                    "revision": _model_output_only(parsed_by_run[row["run_id"]][1]),
+                    f"T{turn}": _model_output_only(parsed_by_run[run_id][turn])
+                    for turn in range(4)
                 }
             )
-            for row in rows
+            for run_id in run_ids
         ]
-        initial_behavior = [initial_behavioral_signature(row) for row in rows]
-        full_behavior = [full_behavioral_signature(row) for row in rows]
-        diagnostics.append(
+        initial_behavior = [
+            turn_behavioral_signature(trajectories[run_id][0]) for run_id in run_ids
+        ]
+        full_behavior = [
+            tuple(turn_behavioral_signature(row) for row in trajectories[run_id])
+            for run_id in run_ids
+        ]
+        condition_rows.append(
             {
-                "case_id": case_id,
                 "condition": condition,
-                "replicate_count": len(rows),
+                "trajectory_count": len(run_ids),
                 "initial_exact_unique_count": len(set(initial_exact)),
                 "initial_exact_duplicate_rate": _duplicate_rate(initial_exact),
                 "full_exact_unique_count": len(set(full_exact)),
@@ -92,11 +89,33 @@ def duplicate_diagnostics(
                 "initial_effectively_deterministic": len(set(initial_behavior)) == 1,
                 "full_effectively_deterministic": len(set(full_behavior)) == 1,
                 "independence_warning": (
-                    "Repeated behaviorally identical temperature-0 outputs are a reproducibility "
-                    "diagnostic, not independent evidence."
+                    "Repeated behaviorally identical temperature-0 trajectories are a "
+                    "reproducibility diagnostic, not independent evidence."
                     if len(set(full_behavior)) == 1
                     else "Residual model nondeterminism observed; report the full distribution."
                 ),
             }
         )
-    return diagnostics
+        for turn in range(4):
+            exact = [
+                canonical_json(_model_output_only(parsed_by_run[run_id][turn]))
+                for run_id in run_ids
+            ]
+            behavior = [
+                turn_behavioral_signature(trajectories[run_id][turn])
+                for run_id in run_ids
+            ]
+            turn_rows.append(
+                {
+                    "condition": condition,
+                    "turn": turn,
+                    "turn_id": f"T{turn}",
+                    "trajectory_count": len(run_ids),
+                    "exact_unique_count": len(set(exact)),
+                    "exact_duplicate_rate": _duplicate_rate(exact),
+                    "behavioral_unique_count": len(set(behavior)),
+                    "behavioral_duplicate_rate": _duplicate_rate(behavior),
+                    "effectively_deterministic": len(set(behavior)) == 1,
+                }
+            )
+    return condition_rows, turn_rows

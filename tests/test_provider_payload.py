@@ -8,7 +8,7 @@ from path_dependence.provider import OpenAIResponsesProvider
 
 
 class ProviderPayloadTests(unittest.TestCase):
-    def test_approved_gpt_5_6_sol_payload(self) -> None:
+    def test_approved_payload(self) -> None:
         with patch.dict(os.environ, {"OPENAI_API_KEY": "offline-test-key"}):
             provider = OpenAIResponsesProvider(
                 model="gpt-5.6-sol",
@@ -19,8 +19,9 @@ class ProviderPayloadTests(unittest.TestCase):
                 seed=None,
                 base_url="https://api.openai.com/v1",
             )
-
-        payload = provider.request_payload([{"role": "user", "content": "offline validation"}])
+        payload = provider.request_payload(
+            [{"role": "user", "content": "offline validation"}]
+        )
         self.assertEqual(payload["model"], "gpt-5.6-sol")
         self.assertEqual(payload["reasoning"], {"effort": "none"})
         self.assertEqual(payload["temperature"], 0)

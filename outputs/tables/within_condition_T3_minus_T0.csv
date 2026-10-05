@@ -1,0 +1,5 @@
+condition,contrast,mean_change_absolute_drift_from_t0,mean_change_abstraction_as_evidence_rate,mean_change_confidence,mean_change_confidence_change_from_t0,mean_change_directional_belief_d,mean_change_factual_hallucination_rate,mean_change_original_fact_citation_rate,mean_change_original_fact_omission_rate,mean_change_prior_abstraction_reference_rate,mean_change_recommendation_intensity,mean_change_unsupported_interpretation_rate,trajectory_count
+fresh_evidence,T3_minus_T0,0.22,,2.6,2.6,-0.22,,0.0,0.0,,0,,10
+no_new_evidence,T3_minus_T0,0.0,,0,0,0.0,,0.0,0.0,,0,,10
+re_anchored,T3_minus_T0,0.0020000000000000005,,1.9,1.9,-0.0020000000000000005,,0.0,0.0,,0,,10
+self_summary,T3_minus_T0,0.0,,0,0,0.0,,0.0,0.0,,0,,10

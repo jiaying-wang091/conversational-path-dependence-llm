@@ -1,4 +1,4 @@
-"""Strict local validation for model-produced JSON."""
+"""Strict local validation for Phase 1C model-produced JSON."""
 
 from __future__ import annotations
 
@@ -9,16 +9,18 @@ from typing import Any
 from .protocol import RECOMMENDATION_CATEGORIES
 
 
-CONCLUSIONS = {"A", "B", "Genuinely indeterminate"}
+CONCLUSIONS = {"A", "B", "genuinely_indeterminate"}
 
 
 class OutputValidationError(ValueError):
-    """Raised when model output violates the approved output contract."""
+    """Raised when model output violates the frozen response contract."""
 
 
 def extract_json(raw_text: str) -> dict[str, Any]:
     text = raw_text.strip()
-    fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, flags=re.DOTALL | re.IGNORECASE)
+    fenced = re.fullmatch(
+        r"```(?:json)?\s*(.*?)\s*```", text, flags=re.DOTALL | re.IGNORECASE
+    )
     if fenced:
         text = fenced.group(1).strip()
     try:
@@ -45,98 +47,83 @@ def _integer_0_100(value: Any, field: str) -> int:
     return value
 
 
-def _validate_probabilities(value: Any, field: str) -> dict[str, int]:
+def _nonempty_string(value: Any, field: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise OutputValidationError(f"{field} must be a non-empty string")
+    return value
+
+
+def _validate_probabilities(value: Any) -> dict[str, int]:
     if not isinstance(value, dict):
-        raise OutputValidationError(f"{field} must be an object")
-    keys = {"A", "B", "Genuinely_indeterminate"}
-    _exact_keys(value, keys, field)
-    probabilities = {key: _integer_0_100(value[key], f"{field}.{key}") for key in keys}
+        raise OutputValidationError("probabilities must be an object")
+    keys = {"A", "B", "indeterminate"}
+    _exact_keys(value, keys, "probabilities")
+    probabilities = {
+        key: _integer_0_100(value[key], f"probabilities.{key}") for key in keys
+    }
     if sum(probabilities.values()) != 100:
-        raise OutputValidationError(f"{field} must sum to 100")
+        raise OutputValidationError("probabilities must sum to 100")
     return probabilities
 
 
-def _validate_evidence(items: Any, allowed_fact_ids: set[str], field: str, text_key: str) -> list[dict]:
+def _validate_evidence(
+    items: Any, allowed_fact_ids: set[str], field: str
+) -> list[dict[str, Any]]:
     if not isinstance(items, list):
         raise OutputValidationError(f"{field} must be an array")
-    checked: list[dict] = []
+    checked: list[dict[str, Any]] = []
     for index, item in enumerate(items):
         if not isinstance(item, dict):
             raise OutputValidationError(f"{field}[{index}] must be an object")
-        _exact_keys(item, {"fact_id", text_key}, f"{field}[{index}]")
-        if item["fact_id"] not in allowed_fact_ids:
-            raise OutputValidationError(f"Unknown fact ID in {field}: {item['fact_id']}")
-        if not isinstance(item[text_key], str) or not item[text_key].strip():
-            raise OutputValidationError(f"{field}[{index}].{text_key} must be non-empty")
+        _exact_keys(item, {"fact_id", "explanation"}, f"{field}[{index}]")
+        fact_id = item["fact_id"]
+        if fact_id is not None and fact_id not in allowed_fact_ids:
+            raise OutputValidationError(f"Unknown or unavailable fact ID in {field}: {fact_id}")
+        _nonempty_string(item["explanation"], f"{field}[{index}].explanation")
         checked.append(item)
     return checked
 
 
-def _validate_recommendation(value: Any, field: str) -> dict:
+def _validate_recommendation(value: Any) -> dict[str, Any]:
     if not isinstance(value, dict):
-        raise OutputValidationError(f"{field} must be an object")
-    _exact_keys(value, {"category", "explanation"}, field)
+        raise OutputValidationError("recommendation must be an object")
+    _exact_keys(value, {"category", "intensity", "explanation"}, "recommendation")
     if value["category"] not in RECOMMENDATION_CATEGORIES:
         raise OutputValidationError(f"Invalid recommendation category: {value['category']}")
-    if not isinstance(value["explanation"], str) or not value["explanation"].strip():
-        raise OutputValidationError(f"{field}.explanation must be non-empty")
+    intensity = value["intensity"]
+    if isinstance(intensity, bool) or not isinstance(intensity, int) or intensity not in (0, 1, 2):
+        raise OutputValidationError("recommendation.intensity must be 0, 1, or 2")
+    _nonempty_string(value["explanation"], "recommendation.explanation")
     return value
 
 
-def validate_initial(value: dict[str, Any], allowed_fact_ids: set[str]) -> dict[str, Any]:
-    keys = {
-        "most_likely_interpretation",
-        "confidence",
-        "probabilities",
-        "evidence_supporting",
-        "evidence_against",
-        "recommended_action",
-        "uncertainty_explanation",
-    }
-    _exact_keys(value, keys, "initial output")
-    if value["most_likely_interpretation"] not in CONCLUSIONS:
-        raise OutputValidationError("Invalid initial conclusion")
-    _integer_0_100(value["confidence"], "confidence")
-    _validate_probabilities(value["probabilities"], "probabilities")
-    _validate_evidence(value["evidence_supporting"], allowed_fact_ids, "evidence_supporting", "relevance")
-    _validate_evidence(value["evidence_against"], allowed_fact_ids, "evidence_against", "relevance")
-    _validate_recommendation(value["recommended_action"], "recommended_action")
-    if not isinstance(value["uncertainty_explanation"], str) or not value["uncertainty_explanation"].strip():
-        raise OutputValidationError("uncertainty_explanation must be non-empty")
-    return value
-
-
-def validate_revision(
-    value: dict[str, Any], allowed_fact_ids: set[str], challenge_ids: set[str]
+def validate_assessment(
+    value: dict[str, Any], allowed_fact_ids: set[str]
 ) -> dict[str, Any]:
     keys = {
-        "revised_most_likely_interpretation",
-        "revised_confidence",
-        "revised_probabilities",
-        "challenge_facts_addressed",
-        "reason_for_retaining_or_changing",
-        "revised_recommended_action",
+        "pre_reassessment_text",
+        "most_likely_interpretation",
+        "probabilities",
+        "confidence",
+        "evidence_supporting_most_likely",
+        "evidence_against_most_likely",
+        "recommendation",
     }
-    _exact_keys(value, keys, "revision output")
-    if value["revised_most_likely_interpretation"] not in CONCLUSIONS:
-        raise OutputValidationError("Invalid revised conclusion")
-    _integer_0_100(value["revised_confidence"], "revised_confidence")
-    _validate_probabilities(value["revised_probabilities"], "revised_probabilities")
-    addressed = _validate_evidence(
-        value["challenge_facts_addressed"],
+    _exact_keys(value, keys, "assessment output")
+    _nonempty_string(value["pre_reassessment_text"], "pre_reassessment_text")
+    if value["most_likely_interpretation"] not in CONCLUSIONS:
+        raise OutputValidationError("Invalid most_likely_interpretation")
+    _validate_probabilities(value["probabilities"])
+    _integer_0_100(value["confidence"], "confidence")
+    _validate_evidence(
+        value["evidence_supporting_most_likely"],
         allowed_fact_ids,
-        "challenge_facts_addressed",
-        "effect_on_judgment",
+        "evidence_supporting_most_likely",
     )
-    non_challenge = {item["fact_id"] for item in addressed} - challenge_ids
-    if non_challenge:
-        raise OutputValidationError(
-            f"challenge_facts_addressed contains non-challenge IDs: {sorted(non_challenge)}"
-        )
-    if not isinstance(value["reason_for_retaining_or_changing"], str) or not value[
-        "reason_for_retaining_or_changing"
-    ].strip():
-        raise OutputValidationError("reason_for_retaining_or_changing must be non-empty")
-    _validate_recommendation(value["revised_recommended_action"], "revised_recommended_action")
+    _validate_evidence(
+        value["evidence_against_most_likely"],
+        allowed_fact_ids,
+        "evidence_against_most_likely",
+    )
+    _validate_recommendation(value["recommendation"])
     return value
-

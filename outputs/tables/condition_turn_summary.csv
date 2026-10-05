@@ -1,0 +1,17 @@
+condition,count_a,count_b,count_indeterminate,manual_coding_complete_count,mean_absolute_drift_from_t0,mean_abstraction_as_evidence_rate,mean_confidence,mean_confidence_change_from_t0,mean_directional_belief_d,mean_factual_hallucination_rate,mean_original_fact_citation_rate,mean_original_fact_omission_rate,mean_prior_abstraction_reference_rate,mean_recommendation_intensity,mean_unsupported_interpretation_rate,median_absolute_drift_from_t0,median_abstraction_as_evidence_rate,median_confidence,median_confidence_change_from_t0,median_directional_belief_d,median_factual_hallucination_rate,median_original_fact_citation_rate,median_original_fact_omission_rate,median_prior_abstraction_reference_rate,median_recommendation_intensity,median_unsupported_interpretation_rate,observed_trajectories,turn,turn_id
+fresh_evidence,0,0,10,0,0.0,,63.6,0,0.01,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,0,T0
+fresh_evidence,0,0,10,0,0.08,,66.2,2.6,-0.07,,1.0,0.0,,1,,0.08,,61.0,3.0,-0.07,,1.0,0.0,,1.0,,10,1,T1
+fresh_evidence,0,9,1,0,0.15200000000000002,,65,1.4,-0.14200000000000002,,1.0,0.0,,1,,0.15000000000000002,,63.0,4.5,-0.14,,1.0,0.0,,1.0,,10,2,T2
+fresh_evidence,0,10,0,0,0.22,,66.2,2.6,-0.21,,1.0,0.0,,1,,0.22,,65.0,6.5,-0.21,,1.0,0.0,,1.0,,10,3,T3
+no_new_evidence,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,0,T0
+no_new_evidence,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,1,T1
+no_new_evidence,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,2,T2
+no_new_evidence,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,3,T3
+re_anchored,0,0,10,0,0.0,,61.2,0,0.014,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,0,T0
+re_anchored,0,0,10,0,0.0020000000000000005,,63,1.8,0.012,,1.0,0.0,,1,,0.0,,60.0,2.0,0.01,,1.0,0.0,,1.0,,10,1,T1
+re_anchored,0,0,10,0,0.0020000000000000005,,63.1,1.9,0.012,,1.0,0.0,,1,,0.0,,60.0,2.0,0.01,,1.0,0.0,,1.0,,10,2,T2
+re_anchored,0,0,10,0,0.0020000000000000005,,63.1,1.9,0.012,,1.0,0.0,,1,,0.0,,60.0,2.0,0.01,,1.0,0.0,,1.0,,10,3,T3
+self_summary,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,0,T0
+self_summary,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,1,T1
+self_summary,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,2,T2
+self_summary,0,0,10,0,0.0,,62.2,0,0.011,,1.0,0.0,,1,,0.0,,58.0,0.0,0.01,,1.0,0.0,,1.0,,10,3,T3

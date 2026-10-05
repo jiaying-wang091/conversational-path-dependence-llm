@@ -1,0 +1,200 @@
+{
+  "valid": true,
+  "errors": [],
+  "phase": "1C",
+  "case_count": 1,
+  "original_fact_count": 6,
+  "fresh_update_count": 3,
+  "condition_count": 4,
+  "turns_per_trajectory": 4,
+  "planned_trajectories_at_ten_replicates": 40,
+  "planned_model_responses": 160,
+  "system_prompt_sha256": "4d4224655a6b5db8de839cbed5ad539c994b4b80fa59a92d181edede806dc5ac",
+  "original_fact_set_sha256": "8cd45649e58a9d91b2242d0a1caa60b2a86abbe12c447ce42c766138c63b58c1",
+  "fresh_update_set_sha256": "5f225aaa8c5e996e3c1a53eec64c72bde673f4be2ad15825762e1efaa895bf6e",
+  "shared_schema_sha256": "55899423826b7cc7fabfb1aa0a28744138490dce436fb1cd800f616a5c1be9eb",
+  "conditions": [
+    {
+      "condition": "fresh_evidence",
+      "t0_prompt_sha256": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+      "turn_prompt_sha256": {
+        "T0": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+        "T1": "d0e9d3cc047d28ca5ac1efc688cbe0516064a444ddd9c727f6468d18147867dc",
+        "T2": "641daa4e922c48b420dfade1d6fd509c9406c4ba2e877a771cf5d8e2ebd20a50",
+        "T3": "cc867029b2306dc300978f5a4dc7e11025c93eaa86ccda925c1d96752e0e20da"
+      },
+      "available_fact_ids_by_turn": {
+        "T0": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T1": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6",
+          "C-U1"
+        ],
+        "T2": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6",
+          "C-U1",
+          "C-U2"
+        ],
+        "T3": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6",
+          "C-U1",
+          "C-U2",
+          "C-U3"
+        ]
+      }
+    },
+    {
+      "condition": "no_new_evidence",
+      "t0_prompt_sha256": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+      "turn_prompt_sha256": {
+        "T0": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+        "T1": "92019ba67413a58f2d76e35d340382996d304ef140a96618462c88f2ca743c3c",
+        "T2": "92019ba67413a58f2d76e35d340382996d304ef140a96618462c88f2ca743c3c",
+        "T3": "92019ba67413a58f2d76e35d340382996d304ef140a96618462c88f2ca743c3c"
+      },
+      "available_fact_ids_by_turn": {
+        "T0": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T1": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T2": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T3": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ]
+      }
+    },
+    {
+      "condition": "re_anchored",
+      "t0_prompt_sha256": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+      "turn_prompt_sha256": {
+        "T0": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+        "T1": "3b5080966d9ec68d839c6e080e6365c56be70906062b79546b5cb395d815cc2c",
+        "T2": "3b5080966d9ec68d839c6e080e6365c56be70906062b79546b5cb395d815cc2c",
+        "T3": "3b5080966d9ec68d839c6e080e6365c56be70906062b79546b5cb395d815cc2c"
+      },
+      "available_fact_ids_by_turn": {
+        "T0": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T1": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T2": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T3": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ]
+      }
+    },
+    {
+      "condition": "self_summary",
+      "t0_prompt_sha256": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+      "turn_prompt_sha256": {
+        "T0": "18938ac4ef6478d24ea0be179ac634c016081c02ea70501a4f6c7d5c7edc50d0",
+        "T1": "13bc0ebfaf78ea8222f3841bbf00d57cddf5429145b055641a6301f6632d400c",
+        "T2": "13bc0ebfaf78ea8222f3841bbf00d57cddf5429145b055641a6301f6632d400c",
+        "T3": "13bc0ebfaf78ea8222f3841bbf00d57cddf5429145b055641a6301f6632d400c"
+      },
+      "available_fact_ids_by_turn": {
+        "T0": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T1": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T2": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ],
+        "T3": [
+          "C-F1",
+          "C-F2",
+          "C-F3",
+          "C-F4",
+          "C-F5",
+          "C-F6"
+        ]
+      }
+    }
+  ]
+}

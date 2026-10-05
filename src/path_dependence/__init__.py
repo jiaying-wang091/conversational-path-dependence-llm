@@ -1,3 +1,3 @@
-"""Phase 1B ambiguity and conversational path-dependence pilot."""
+"""Phase 1C longitudinal self-reinforcement pilot."""
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"

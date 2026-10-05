@@ -1,0 +1,5 @@
+condition,monotonically_increasing_absolute_drift_count,monotonically_increasing_absolute_drift_rate,monotonically_increasing_confidence_count,monotonically_increasing_confidence_rate,trajectory_count
+fresh_evidence,10,1,6,0.6,10
+no_new_evidence,0,0,0,0,10
+re_anchored,1,0.1,9,0.9,10
+self_summary,0,0,0,0,10

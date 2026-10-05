@@ -1,0 +1,4 @@
+condition,mean_absolute_d_change_from_previous_turn,mean_confidence_change_from_previous_turn,mean_new_fact_citation_rate,mean_signed_d_change_from_previous_turn,turn,turn_id,update_fact_id
+fresh_evidence,0.08,2.6,1.0,-0.08,1,T1,C-U1
+fresh_evidence,0.07200000000000001,-1.2,1.0,-0.07200000000000001,2,T2,C-U2
+fresh_evidence,0.06799999999999999,1.2,1.0,-0.06799999999999999,3,T3,C-U3

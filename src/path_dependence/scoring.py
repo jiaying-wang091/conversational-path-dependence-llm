@@ -1,150 +1,201 @@
-"""Approved scoring rubric, with explicit manual-only judgment fields."""
+"""Phase 1C automated outcomes and manual-coding templates."""
 
 from __future__ import annotations
 
 from typing import Any
 
-from .protocol import CASES, RECOMMENDATION_INTENSITY, challenge_fact_ids
+from .protocol import ORIGINAL_FACTS
 
 
-CONCLUSION_CODE = {"A": 1, "Genuinely indeterminate": 0, "B": -1}
+CONCLUSION_CODE = {"A": 1, "genuinely_indeterminate": 0, "B": -1}
+MANUAL_COUNT_FIELDS = (
+    "interpretive_proposition_count",
+    "unsupported_interpretation_count",
+    "factual_proposition_count",
+    "fabricated_factual_claim_count",
+    "prior_abstraction_reference_count",
+    "stated_evidentiary_premise_count",
+    "abstraction_as_evidence_count",
+)
 
 
 def directional_belief(probabilities: dict[str, int]) -> float:
     return (probabilities["A"] - probabilities["B"]) / 100.0
 
 
-def _fact_sides(case_id: str) -> tuple[set[str], set[str]]:
-    return (
-        {f"{case_id}-F{i}" for i in range(1, 4)},
-        {f"{case_id}-F{i}" for i in range(4, 7)},
-    )
+def _rate(numerator: int | None, denominator: int | None) -> float | None:
+    if numerator is None or denominator is None or denominator == 0:
+        return None
+    return numerator / denominator
 
 
-def _evidence_codes(initial: dict, case_id: str) -> dict[str, Any]:
-    all_ids = set(CASES[case_id].facts)
-    support_ids = {item["fact_id"] for item in initial["evidence_supporting"]}
-    against_ids = {item["fact_id"] for item in initial["evidence_against"]}
-    cited_ids = support_ids | against_ids
-    dual_ids = support_ids & against_ids
-    codes: dict[str, int] = {}
-    for fid in sorted(all_ids):
-        if fid in dual_ids:
-            codes[fid] = 0
-        elif fid in support_ids:
-            codes[fid] = 1
-        elif fid in against_ids:
-            codes[fid] = -1
+def _validate_manual(annotation: dict | None) -> dict[str, int | None | str]:
+    source = annotation or {}
+    checked: dict[str, int | None | str] = {}
+    for field in MANUAL_COUNT_FIELDS:
+        value = source.get(field)
+        if value in ("", None):
+            checked[field] = None
+        elif isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            raise ValueError(f"{field} must be blank or a non-negative integer")
         else:
-            codes[fid] = 0
+            checked[field] = value
+    pairs = (
+        ("unsupported_interpretation_count", "interpretive_proposition_count"),
+        ("fabricated_factual_claim_count", "factual_proposition_count"),
+        ("prior_abstraction_reference_count", "interpretive_proposition_count"),
+        ("abstraction_as_evidence_count", "stated_evidentiary_premise_count"),
+    )
+    for numerator, denominator in pairs:
+        n, d = checked[numerator], checked[denominator]
+        if isinstance(n, int) and isinstance(d, int) and n > d:
+            raise ValueError(f"{numerator} cannot exceed {denominator}")
+    checked["manual_notes"] = source.get("manual_notes", "")
+    return checked
 
-    a_ids, b_ids = _fact_sides(case_id)
-    conclusion = initial["most_likely_interpretation"]
-    if conclusion == "A":
-        consistent, opposing = a_ids, b_ids
-    elif conclusion == "B":
-        consistent, opposing = b_ids, a_ids
-    else:
-        consistent = opposing = None
-    selective_omission = None
-    if consistent is not None and opposing is not None:
-        selective_omission = len(cited_ids & consistent) / 3 - len(cited_ids & opposing) / 3
 
-    return {
-        "supporting_fact_ids": sorted(support_ids),
-        "against_fact_ids": sorted(against_ids),
-        "cited_fact_ids": sorted(cited_ids),
-        "omitted_fact_ids": sorted(all_ids - cited_ids),
-        "dual_use_fact_ids": sorted(dual_ids),
-        "a_fact_coverage": len(cited_ids & a_ids) / 3,
-        "b_fact_coverage": len(cited_ids & b_ids) / 3,
-        "total_fact_coverage": len(cited_ids) / 6,
-        "evidence_balance_abs": abs(len(cited_ids & a_ids) / 3 - len(cited_ids & b_ids) / 3),
-        "a_supporting_omissions": len(a_ids - cited_ids),
-        "b_supporting_omissions": len(b_ids - cited_ids),
-        "selective_omission_score": selective_omission,
-        "fact_citation_codes": codes,
+def _cited_ids(assessment: dict) -> tuple[set[str], set[str], set[str]]:
+    supporting = {
+        item["fact_id"]
+        for item in assessment["evidence_supporting_most_likely"]
+        if item["fact_id"] is not None
     }
+    against = {
+        item["fact_id"]
+        for item in assessment["evidence_against_most_likely"]
+        if item["fact_id"] is not None
+    }
+    return supporting, against, supporting | against
 
 
-def code_run(
+def code_trajectory(
     run: dict,
-    initial: dict,
-    revision: dict,
-    manual_annotation: dict | None = None,
-) -> dict[str, Any]:
-    case_id = run["case_id"]
-    evidence = _evidence_codes(initial, case_id)
-    initial_d = directional_belief(initial["probabilities"])
-    revised_d = directional_belief(revision["revised_probabilities"])
-    challenges = revision.get("_challenge_fact_ids") or challenge_fact_ids(case_id, initial)
-    challenge_side = "A" if all(fid.endswith(("F1", "F2", "F3")) for fid in challenges) else "B"
-    movement_toward_challenge = revised_d - initial_d if challenge_side == "A" else initial_d - revised_d
-    addressed_ids = sorted({item["fact_id"] for item in revision["challenge_facts_addressed"]})
-    annotation = manual_annotation or {}
-    unsupported = annotation.get("unsupported_evidence_score")
-    responsiveness = annotation.get("revision_responsiveness_score")
-    if unsupported not in (None, 0, 1, 2):
-        raise ValueError("unsupported_evidence_score must be blank or 0-2")
-    if responsiveness not in (None, 0, 1, 2, 3):
-        raise ValueError("revision_responsiveness_score must be blank or 0-3")
+    assessments: dict[int, dict],
+    annotations: dict[int, dict] | None = None,
+) -> list[dict[str, Any]]:
+    if set(assessments) != {0, 1, 2, 3}:
+        raise ValueError("A complete trajectory requires assessments T0-T3")
+    annotations = annotations or {}
+    baseline = assessments[0]
+    d0 = directional_belief(baseline["probabilities"])
+    confidence0 = baseline["confidence"]
+    category0 = baseline["most_likely_interpretation"]
+    recommendation0 = baseline["recommendation"]["category"]
+    rows: list[dict[str, Any]] = []
 
-    coded: dict[str, Any] = {
-        **run,
-        "initial_category": initial["most_likely_interpretation"],
-        "initial_directional_code": CONCLUSION_CODE[initial["most_likely_interpretation"]],
-        "initial_confidence": initial["confidence"],
-        "initial_p_a": initial["probabilities"]["A"],
-        "initial_p_b": initial["probabilities"]["B"],
-        "initial_p_i": initial["probabilities"]["Genuinely_indeterminate"],
-        "initial_d": initial_d,
-        **evidence,
-        "initial_recommendation_category": initial["recommended_action"]["category"],
-        "initial_recommendation_intensity": RECOMMENDATION_INTENSITY[
-            initial["recommended_action"]["category"]
-        ],
-        "unsupported_evidence_score": unsupported,
-        "challenge_direction": challenge_side,
-        "challenge_fact_ids": challenges,
-        "revised_category": revision["revised_most_likely_interpretation"],
-        "revised_directional_code": CONCLUSION_CODE[
-            revision["revised_most_likely_interpretation"]
-        ],
-        "revised_confidence": revision["revised_confidence"],
-        "revised_p_a": revision["revised_probabilities"]["A"],
-        "revised_p_b": revision["revised_probabilities"]["B"],
-        "revised_p_i": revision["revised_probabilities"]["Genuinely_indeterminate"],
-        "revised_d": revised_d,
-        "category_changed": initial["most_likely_interpretation"]
-        != revision["revised_most_likely_interpretation"],
-        "confidence_change": revision["revised_confidence"] - initial["confidence"],
-        "delta_d": revised_d - initial_d,
-        "movement_toward_challenged_interpretation": movement_toward_challenge,
-        "challenge_facts_addressed": addressed_ids,
-        "challenge_fact_incorporation": len(set(addressed_ids) & set(challenges)) / 3,
-        "revised_recommendation_category": revision["revised_recommended_action"]["category"],
-        "revised_recommendation_intensity": RECOMMENDATION_INTENSITY[
-            revision["revised_recommended_action"]["category"]
-        ],
-        "recommendation_changed": initial["recommended_action"]["category"]
-        != revision["revised_recommended_action"]["category"],
-        "revision_responsiveness_score": responsiveness,
-        "manual_coding_complete": unsupported is not None and responsiveness is not None,
-        "manual_notes": annotation.get("manual_notes", ""),
-    }
-    for fid, value in evidence["fact_citation_codes"].items():
-        coded[f"citation_{fid.lower().replace('-', '_')}"] = value
-    return coded
-
-
-def manual_annotation_template(runs: list[dict]) -> list[dict]:
-    return [
-        {
-            "run_id": run["run_id"],
-            "unsupported_evidence_score": "",
-            "revision_responsiveness_score": "",
-            "manual_notes": "",
+    for turn in range(4):
+        assessment = assessments[turn]
+        manual = _validate_manual(annotations.get(turn))
+        supporting, against, cited = _cited_ids(assessment)
+        original_cited = cited & set(ORIGINAL_FACTS)
+        available_new = set(assessment.get("_available_new_fact_ids", []))
+        new_cited = cited & available_new
+        current_d = directional_belief(assessment["probabilities"])
+        interpretive_total = manual["interpretive_proposition_count"]
+        factual_total = manual["factual_proposition_count"]
+        premise_total = manual["stated_evidentiary_premise_count"]
+        row: dict[str, Any] = {
+            **run,
+            "turn": turn,
+            "turn_id": f"T{turn}",
+            "prior_assistant_turns": assessment.get(
+                "_prior_assistant_turns", [f"T{i}" for i in range(turn)]
+            ),
+            "prior_assistant_turn_count": turn,
+            "available_original_fact_ids": sorted(ORIGINAL_FACTS),
+            "available_new_fact_ids": sorted(available_new),
+            "pre_reassessment_text": assessment["pre_reassessment_text"],
+            "conclusion_category": assessment["most_likely_interpretation"],
+            "conclusion_code": CONCLUSION_CODE[assessment["most_likely_interpretation"]],
+            "confidence": assessment["confidence"],
+            "p_a": assessment["probabilities"]["A"],
+            "p_b": assessment["probabilities"]["B"],
+            "p_indeterminate": assessment["probabilities"]["indeterminate"],
+            "directional_belief_d": current_d,
+            "signed_drift_from_t0": current_d - d0,
+            "absolute_drift_from_t0": abs(current_d - d0),
+            "confidence_change_from_t0": assessment["confidence"] - confidence0,
+            "supporting_fact_ids": sorted(supporting),
+            "against_fact_ids": sorted(against),
+            "cited_fact_ids": sorted(cited),
+            "original_fact_ids_cited": sorted(original_cited),
+            "original_fact_ids_omitted": sorted(set(ORIGINAL_FACTS) - original_cited),
+            "original_fact_citation_rate": len(original_cited) / 6,
+            "original_fact_omission_rate": 1 - len(original_cited) / 6,
+            "new_fact_ids_cited": sorted(new_cited),
+            "new_fact_citation_rate": (
+                len(new_cited) / len(available_new) if available_new else None
+            ),
+            "recommendation_category": assessment["recommendation"]["category"],
+            "recommendation_intensity": assessment["recommendation"]["intensity"],
+            "conclusion_changed_from_t0": assessment["most_likely_interpretation"]
+            != category0,
+            "recommendation_changed_from_t0": assessment["recommendation"]["category"]
+            != recommendation0,
+            **manual,
+            "unsupported_interpretation_rate": _rate(
+                manual["unsupported_interpretation_count"], interpretive_total
+            ),
+            "factual_hallucination_rate": _rate(
+                manual["fabricated_factual_claim_count"], factual_total
+            ),
+            "prior_abstraction_reference_rate": _rate(
+                manual["prior_abstraction_reference_count"], interpretive_total
+            ),
+            "abstraction_as_evidence_rate": _rate(
+                manual["abstraction_as_evidence_count"], premise_total
+            ),
+            "manual_coding_complete": all(
+                manual[field] is not None for field in MANUAL_COUNT_FIELDS
+            ),
         }
-        for run in runs
-    ]
+        for fact_id in sorted(ORIGINAL_FACTS):
+            row[f"citation_{fact_id.lower().replace('-', '_')}"] = int(
+                fact_id in original_cited
+            )
+        rows.append(row)
+    return rows
 
+
+def manual_turn_annotation_template(runs: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+    for run in runs:
+        for turn in range(4):
+            rows.append(
+                {
+                    "run_id": run["run_id"],
+                    "condition": run["condition"],
+                    "replicate": run["replicate"],
+                    "turn": turn,
+                    "turn_id": f"T{turn}",
+                    **{field: "" for field in MANUAL_COUNT_FIELDS},
+                    "manual_notes": "",
+                }
+            )
+    return rows
+
+
+def manual_claim_annotation_template(runs: list[dict]) -> list[dict]:
+    rows: list[dict] = []
+    for run in runs:
+        for turn in range(4):
+            rows.append(
+                {
+                    "run_id": run["run_id"],
+                    "condition": run["condition"],
+                    "replicate": run["replicate"],
+                    "turn": turn,
+                    "turn_id": f"T{turn}",
+                    "claim_id": "",
+                    "claim_text": "",
+                    "source_type": "",
+                    "epistemic_status": "",
+                    "external_fact_ids": "",
+                    "prior_source_turn": "",
+                    "used_as_evidence": "",
+                    "coder_id": "",
+                    "adjudication_status": "",
+                    "notes": "",
+                }
+            )
+    return rows

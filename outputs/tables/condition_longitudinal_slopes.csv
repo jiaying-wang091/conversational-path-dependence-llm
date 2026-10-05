@@ -1,0 +1,5 @@
+condition,mean_slope_absolute_drift_from_t0,mean_slope_abstraction_as_evidence_rate,mean_slope_confidence,mean_slope_confidence_change_from_t0,mean_slope_directional_belief_d,mean_slope_factual_hallucination_rate,mean_slope_original_fact_citation_rate,mean_slope_original_fact_omission_rate,mean_slope_prior_abstraction_reference_rate,mean_slope_recommendation_intensity,mean_slope_unsupported_interpretation_rate,trajectory_count
+fresh_evidence,0.0732,,0.6599999999999999,0.6599999999999999,-0.07319999999999999,,0.0,0.0,,0.0,,10
+no_new_evidence,0.0,,0.0,0.0,0.0,,0.0,0.0,,0.0,,10
+re_anchored,0.0006000000000000001,,0.58,0.58,-0.0006000000000000001,,0.0,0.0,,0.0,,10
+self_summary,0.0,,0.0,0.0,0.0,,0.0,0.0,,0.0,,10

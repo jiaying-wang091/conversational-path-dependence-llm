@@ -1,0 +1,41 @@
+approved_decoding,basis_instruction,case_id,condition,condition_label,execution_order,max_output_tokens,model,planned_model_responses,planned_turns,reasoning_effort,receives_new_external_facts,replicate,run_id,seed,temperature,top_p
+True,prior_summary,C,self_summary,Self-summary,1,1500,gpt-5.6-sol,4,4,none,False,3,C_self_summary_r03,,0,1
+True,original_facts,C,re_anchored,Re-anchored,2,1500,gpt-5.6-sol,4,4,none,False,7,C_re_anchored_r07,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,3,1500,gpt-5.6-sol,4,4,none,True,5,C_fresh_evidence_r05,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,4,1500,gpt-5.6-sol,4,4,none,False,4,C_no_new_evidence_r04,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,5,1500,gpt-5.6-sol,4,4,none,True,8,C_fresh_evidence_r08,,0,1
+True,prior_summary,C,self_summary,Self-summary,6,1500,gpt-5.6-sol,4,4,none,False,8,C_self_summary_r08,,0,1
+True,prior_summary,C,self_summary,Self-summary,7,1500,gpt-5.6-sol,4,4,none,False,6,C_self_summary_r06,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,8,1500,gpt-5.6-sol,4,4,none,False,2,C_no_new_evidence_r02,,0,1
+True,prior_summary,C,self_summary,Self-summary,9,1500,gpt-5.6-sol,4,4,none,False,4,C_self_summary_r04,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,10,1500,gpt-5.6-sol,4,4,none,False,8,C_no_new_evidence_r08,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,11,1500,gpt-5.6-sol,4,4,none,True,2,C_fresh_evidence_r02,,0,1
+True,prior_summary,C,self_summary,Self-summary,12,1500,gpt-5.6-sol,4,4,none,False,10,C_self_summary_r10,,0,1
+True,original_facts,C,re_anchored,Re-anchored,13,1500,gpt-5.6-sol,4,4,none,False,10,C_re_anchored_r10,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,14,1500,gpt-5.6-sol,4,4,none,False,9,C_no_new_evidence_r09,,0,1
+True,original_facts,C,re_anchored,Re-anchored,15,1500,gpt-5.6-sol,4,4,none,False,8,C_re_anchored_r08,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,16,1500,gpt-5.6-sol,4,4,none,True,4,C_fresh_evidence_r04,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,17,1500,gpt-5.6-sol,4,4,none,True,3,C_fresh_evidence_r03,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,18,1500,gpt-5.6-sol,4,4,none,False,7,C_no_new_evidence_r07,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,19,1500,gpt-5.6-sol,4,4,none,False,3,C_no_new_evidence_r03,,0,1
+True,prior_summary,C,self_summary,Self-summary,20,1500,gpt-5.6-sol,4,4,none,False,9,C_self_summary_r09,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,21,1500,gpt-5.6-sol,4,4,none,True,7,C_fresh_evidence_r07,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,22,1500,gpt-5.6-sol,4,4,none,False,5,C_no_new_evidence_r05,,0,1
+True,original_facts,C,re_anchored,Re-anchored,23,1500,gpt-5.6-sol,4,4,none,False,2,C_re_anchored_r02,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,24,1500,gpt-5.6-sol,4,4,none,True,1,C_fresh_evidence_r01,,0,1
+True,prior_summary,C,self_summary,Self-summary,25,1500,gpt-5.6-sol,4,4,none,False,1,C_self_summary_r01,,0,1
+True,original_facts,C,re_anchored,Re-anchored,26,1500,gpt-5.6-sol,4,4,none,False,5,C_re_anchored_r05,,0,1
+True,original_facts,C,re_anchored,Re-anchored,27,1500,gpt-5.6-sol,4,4,none,False,9,C_re_anchored_r09,,0,1
+True,prior_summary,C,self_summary,Self-summary,28,1500,gpt-5.6-sol,4,4,none,False,7,C_self_summary_r07,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,29,1500,gpt-5.6-sol,4,4,none,False,10,C_no_new_evidence_r10,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,30,1500,gpt-5.6-sol,4,4,none,False,6,C_no_new_evidence_r06,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,31,1500,gpt-5.6-sol,4,4,none,True,9,C_fresh_evidence_r09,,0,1
+True,original_facts,C,re_anchored,Re-anchored,32,1500,gpt-5.6-sol,4,4,none,False,1,C_re_anchored_r01,,0,1
+True,prior_summary,C,self_summary,Self-summary,33,1500,gpt-5.6-sol,4,4,none,False,2,C_self_summary_r02,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,34,1500,gpt-5.6-sol,4,4,none,True,6,C_fresh_evidence_r06,,0,1
+True,original_facts,C,re_anchored,Re-anchored,35,1500,gpt-5.6-sol,4,4,none,False,3,C_re_anchored_r03,,0,1
+True,original_facts,C,re_anchored,Re-anchored,36,1500,gpt-5.6-sol,4,4,none,False,6,C_re_anchored_r06,,0,1
+True,original_facts,C,re_anchored,Re-anchored,37,1500,gpt-5.6-sol,4,4,none,False,4,C_re_anchored_r04,,0,1
+True,prior_summary,C,self_summary,Self-summary,38,1500,gpt-5.6-sol,4,4,none,False,5,C_self_summary_r05,,0,1
+True,new_update,C,fresh_evidence,Fresh evidence,39,1500,gpt-5.6-sol,4,4,none,True,10,C_fresh_evidence_r10,,0,1
+True,open_reassessment,C,no_new_evidence,No new evidence,40,1500,gpt-5.6-sol,4,4,none,False,1,C_no_new_evidence_r01,,0,1

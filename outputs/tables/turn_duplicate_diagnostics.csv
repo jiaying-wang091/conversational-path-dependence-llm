@@ -1,0 +1,17 @@
+behavioral_duplicate_rate,behavioral_unique_count,condition,effectively_deterministic,exact_duplicate_rate,exact_unique_count,trajectory_count,turn,turn_id
+0.4666666666666667,2,fresh_evidence,False,0.0,10,10,0,T0
+0.4666666666666667,2,fresh_evidence,False,0.0,10,10,1,T1
+0.13333333333333333,7,fresh_evidence,False,0.0,10,10,2,T2
+0.044444444444444446,8,fresh_evidence,False,0.0,10,10,3,T3
+0.4,3,no_new_evidence,False,0.0,10,10,0,T0
+0.4,3,no_new_evidence,False,0.0,10,10,1,T1
+0.4,3,no_new_evidence,False,0.0,10,10,2,T2
+0.4,3,no_new_evidence,False,0.0,10,10,3,T3
+0.4888888888888889,3,re_anchored,False,0.0,10,10,0,T0
+0.35555555555555557,4,re_anchored,False,0.0,10,10,1,T1
+0.3333333333333333,5,re_anchored,False,0.0,10,10,2,T2
+0.3333333333333333,5,re_anchored,False,0.0,10,10,3,T3
+0.4,3,self_summary,False,0.0,10,10,0,T0
+0.4,3,self_summary,False,0.0,10,10,1,T1
+0.4,3,self_summary,False,0.0,10,10,2,T2
+0.4,3,self_summary,False,0.0,10,10,3,T3

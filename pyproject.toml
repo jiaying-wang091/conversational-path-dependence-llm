@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "phase1b-conversational-path-dependence"
-version = "0.2.0"
-description = "Reproducible Phase 1B ambiguity pilot for conversational path dependence"
+name = "phase1c-conversational-path-dependence"
+version = "0.3.0"
+description = "Reproducible Phase 1C longitudinal self-reinforcement pilot"
 requires-python = ">=3.11"
 dependencies = []
 
