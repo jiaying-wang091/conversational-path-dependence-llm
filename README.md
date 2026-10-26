@@ -1,4 +1,5 @@
 # Phase 1 Conversational Path Dependence Pilot
+[![DOI](https://zenodo.org/badge/1399596856.svg)](https://doi.org/10.5281/zenodo.23660727)
 
 This project implements the approved Phase 1 protocol without changing its cases, facts, trajectories, prompts, scoring rubric, or analysis logic.
 
